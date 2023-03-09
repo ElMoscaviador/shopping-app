@@ -9,7 +9,7 @@ const Cart = () => {
         aria-label="cart-empty-placeholder"
         role="generic"
       >
-        Your cart is empty.
+        Your cart is empty!
       </p>
     </main>
   );
