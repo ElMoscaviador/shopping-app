@@ -1,0 +1,20 @@
+A vegan online store
+
+Main page has a navbar
+
+Tabs in navbar:
+- home
+- shop
+- search
+- cart
+
+shop redirects to the shop page
+search opens a searchbar modal
+cart opens a cart modal
+
+Categories in shop:
+- confitures
+- viandes
+- huiles
+Each category has 3/4 products
+
