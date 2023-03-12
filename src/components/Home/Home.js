@@ -1,9 +1,11 @@
-import SubmitButton from "./SubmitButton";
+import SubmitButton from "../SubmitButton";
 
 const Home = () => {
   return (
     <main className="home" aria-label="home">
-      <SubmitButton />
+      <SubmitButton keyword="shop" to="/shop">
+        Shop now
+      </SubmitButton>
     </main>
   );
 };

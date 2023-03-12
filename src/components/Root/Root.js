@@ -6,7 +6,6 @@ import Shop from "../Shop/Shop";
 import ShopCategory from "../Shop/ShopCategory";
 import ItemPage from "../Item/ItemPage";
 import Cart from "../Cart/Cart";
-import { loader as shopLoader, action as shopAction } from "../Shop/Shop";
 import { loader as categoryLoader } from "../Shop/ShopCategory";
 import { loader as itemPageLoader } from "../Item/ItemPage";
 
@@ -18,12 +17,10 @@ const routes = [
       {
         path: "/",
         element: <Home />,
-        action: shopAction,
       },
       {
         path: "/shop",
         element: <Shop />,
-        loader: shopLoader,
         children: [
           {
             path: "/shop/:categoryId",
@@ -45,7 +42,9 @@ const routes = [
   },
 ];
 
-const Root = () => <RouterProvider router={createBrowserRouter(routes)} />;
+const Root = () => {
+  return <RouterProvider router={createBrowserRouter(routes)} />;
+};
 
 export default Root;
 export { routes };

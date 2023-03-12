@@ -28,3 +28,36 @@ test("The navbar links redirect to the right sections.", async () => {
   const cart = screen.queryByRole("main", { name: "cart" });
   expect(cart).toBeInTheDocument();
 });
+
+describe("Adding an item to the cart updates the cart counter in the main nav.", () => {
+  test("It increases by one if a new product is added", async () => {
+    const user = userEvent.setup();
+    const router = createMemoryRouter(routes, {
+      initialEntries: ["/", "/shop", "/shop/cat-1", "/shop/cat-1/name 1"],
+    });
+    render(<RouterProvider router={router} />);
+    const addToCart = await screen.findByRole("button", {
+      name: "add-to-cart",
+    });
+    await act(() => user.click(addToCart));
+    const cartCounter = await screen.findByTestId("cart-counter");
+    expect(cartCounter).toHaveTextContent(1);
+  });
+
+  test("It does not increase if several of the same item new product is added", async () => {
+    const user = userEvent.setup();
+    const router = createMemoryRouter(routes, {
+      initialEntries: ["/", "/shop", "/shop/cat-1", "/shop/cat-1/name 1"],
+    });
+    render(<RouterProvider router={router} />);
+    const addToCart = await screen.findByRole("button", {
+      name: "add-to-cart",
+    });
+    await act(() => user.click(addToCart));
+    const cartCounter = await screen.findByTestId("cart-counter");
+    expect(cartCounter).toHaveTextContent(1);
+    await act(() => user.click(addToCart));
+    expect(cartCounter).not.toHaveTextContent(2);
+    expect(cartCounter).toHaveTextContent(1);
+  });
+});

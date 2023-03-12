@@ -35,76 +35,76 @@ const data = {
     "cat-2": [
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 1",
+        name: "name 5",
         price: "5.40",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 2",
+        name: "name 6",
         price: "3.70",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 3",
+        name: "name 7",
         price: "17.80",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 4",
+        name: "name 8",
         price: "5.80",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 5",
+        name: "name 9",
         price: "15.80",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 6",
+        name: "name 10",
         price: "50.80",
       },
     ],
     "cat-3": [
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 1",
+        name: "name 11",
         price: "5.40",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 2",
+        name: "name 12",
         price: "3.70",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 3",
+        name: "name 13",
         price: "17.80",
       },
     ],
     "cat-4": [
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 1",
+        name: "name 14",
         price: "5.40",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 2",
+        name: "name 15",
         price: "3.70",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 3",
+        name: "name 16",
         price: "17.80",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 4",
+        name: "name 17",
         price: "5.80",
       },
       {
         img: { thumbnail: thumbnail, page: [picture1, picture2] },
-        name: "name 5",
+        name: "name 18",
         price: "0.80",
       },
     ],

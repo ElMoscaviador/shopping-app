@@ -1,5 +1,6 @@
-import { useLoaderData, useLocation } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import ItemThumbnail from "../Item/ItemThumbnail";
+import { data } from "./data";
 
 const loader = ({ params }) => {
   return params.categoryId;
@@ -7,15 +8,20 @@ const loader = ({ params }) => {
 
 const ShopCategory = () => {
   const categoryId = useLoaderData();
-  const categoryData = useLocation().state[categoryId];
+  const {itemsData} = data;
+
   return (
     <main
       className="shop__category"
       aria-label="shop-category"
       data-testid={categoryId}
     >
-      {categoryData.map((data) => (
-        <ItemThumbnail categoryId={categoryId} data={data} key={data.name} />
+      {itemsData[categoryId].map((itemData) => (
+        <ItemThumbnail
+          categoryId={categoryId}
+          itemData={itemData}
+          key={itemData.name}
+        />
       ))}
     </main>
   );
