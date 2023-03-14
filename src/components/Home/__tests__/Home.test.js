@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import { routes } from "../Root/Root";
+import { routes } from "../../Root/Root";
 
 describe("The home page is displayed correctly.", () => {
   const router = createMemoryRouter(routes);

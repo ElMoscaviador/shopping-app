@@ -1,13 +1,13 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppWrapper from "../AppWrapper/AppWrapper";
+import Cart from "../Cart/Cart";
 import Home from "../Home/Home";
+import ItemPage from "../Item/ItemPage/ItemPage";
 import Shop from "../Shop/Shop";
 import ShopCategory from "../Shop/ShopCategory";
-import ItemPage from "../Item/ItemPage";
-import Cart from "../Cart/Cart";
 import { loader as categoryLoader } from "../Shop/ShopCategory";
-import { loader as itemPageLoader } from "../Item/ItemPage";
+import { loader as itemPageLoader } from "../Item/ItemPage/handlers";
 
 const routes = [
   {
@@ -23,12 +23,12 @@ const routes = [
         element: <Shop />,
         children: [
           {
-            path: "/shop/:categoryId",
+            path: "/shop/:category",
             element: <ShopCategory />,
             loader: categoryLoader,
           },
           {
-            path: "/shop/:categoryId/:productId",
+            path: "/shop/:category/:sku",
             element: <ItemPage />,
             loader: itemPageLoader,
           },

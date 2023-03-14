@@ -1,0 +1,74 @@
+:root {
+    --numberOfImages: 1;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+/*     overflow-x: hidden;
+ */    justify-content: stretch;
+    border: 2px solid black;
+}
+
+.main-nav {
+    display: block;
+    height: 44px;
+    width: 100%;
+    background-color: red;
+    padding: 0rem 1rem;
+}
+
+.main-nav__list {
+    display: grid;
+    background-color: orange;
+    grid-template-areas: "empty home right";
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    list-style: none;
+}
+
+.main-nav__list>li:first-child {
+    grid-area: home;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav__list__right-group {
+    grid-area: right;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 0.5rem;
+}
+
+.home {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.showcased-item__container {
+    display: grid;
+    flex-grow: 1;
+    position: absolute;
+    align-items: center;
+    height: 100%;
+    max-height: 100%;
+    width: 300%;
+    transform: translate(calc(var(--index, 0)/var(--numberOfImages)-100%));
+    background-color: palegoldenrod;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.showcased-item {
+    background-repeat: no-repeat;
+    width: 100%;
+    width: calc(100%/var(--numberOfImages));
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+    overflow: hidden;
+}

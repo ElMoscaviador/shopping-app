@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 
-const ItemThumbnail = ({ categoryId, itemData }) => {
+const ItemThumbnail = ({ sku }) => {
+  const { fetchItems } = useOutletContext();
+  const currentItemData = fetchItems("sku", sku);
+
+  const { category, name, price, img } = currentItemData;
+
   return (
     <div className="item-thumbnail" aria-label="item-thumbnail">
       <div
@@ -11,22 +16,22 @@ const ItemThumbnail = ({ categoryId, itemData }) => {
           alt="product"
           className="item-thumbnail__picture"
           aria-label="thumbnail-picture"
-          src={itemData.img.thumbnail}
+          src={img.thumbnail}
         />
       </div>
       <Link
-        to={`/shop/${categoryId}/${itemData.name}`}
+        to={`/shop/${category}/${sku}`}
         className="item-thumbnail__name"
         aria-label="thumbnail-name"
       >
-        <h3>{itemData.name}</h3>
+        <h3>{name}</h3>
       </Link>
       <p
         data-testid="thumbnail-price"
         className="item-thumbnail__price"
         aria-label="thumbnail-price"
       >
-        ${itemData.price}
+        ${parseFloat(price).toFixed(2)}
       </p>
     </div>
   );

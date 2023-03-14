@@ -1,28 +1,22 @@
-import { useLoaderData } from "react-router-dom";
-import ItemThumbnail from "../Item/ItemThumbnail";
-import { data } from "./data";
+import { useLoaderData, useOutletContext } from "react-router-dom";
+import ItemThumbnail from "../Item/ItemThumbnail/ItemThumbnail";
 
-const loader = ({ params }) => {
-  return params.categoryId;
-};
+const loader = ({ params }) => params.category;
 
 const ShopCategory = () => {
-  const categoryId = useLoaderData();
-  const {itemsData} = data;
+  const category = useLoaderData();
+  const { fetchItems } = useOutletContext();
+  const itemsSKUs = fetchItems("category", category, "sku");
 
   return (
     <main
       className="shop__category"
       aria-label="shop-category"
-      data-testid={categoryId}
+      data-testid={category}
     >
-      {itemsData[categoryId].map((itemData) => (
-        <ItemThumbnail
-          categoryId={categoryId}
-          itemData={itemData}
-          key={itemData.name}
-        />
-      ))}
+      {itemsSKUs.map((sku) => {
+        return <ItemThumbnail sku={sku} key={sku} />;
+      })}
     </main>
   );
 };

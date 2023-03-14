@@ -1,29 +1,35 @@
 import { render, screen } from "@testing-library/react";
 import ItemPage from "./ItemPage";
-import { data as categoriesData } from "../Shop/data";
-import { categoryIds as mockCategoryIds } from "../../jest/mockedCategories";
+import { mockItems } from "../../../jest/mockData";
 import { BrowserRouter } from "react-router-dom";
-
-const mockCustomData = categoriesData["itemsData"][mockCategoryIds[0]][0];
 
 jest.mock("react-router-dom", () => {
   return {
     ...jest.requireActual("react-router-dom"),
-    useLocation: () => ({
-      state: {
-        name: mockCustomData.name,
-        price: mockCustomData.price,
-        img: { page: [mockCustomData.img.page[0], mockCustomData.img.page[1]] },
-      },
-    }),
-    useLoaderData: () => mockCategoryIds[0],
+    useLoaderData: () => mockItems[0].sku,
+    useOutletContext: () => {
+      const cart = [];
+      const setCart = () => jest.fn();
+      const fetchItems = () => {
+        return {
+          category: mockItems[0].category,
+          name: mockItems[0].name,
+          price: mockItems[0].price,
+          img: {
+            thumbnail: mockItems[0].img.thumbnail,
+            page: [mockItems[0].img.page[0], mockItems[0].img.page[1]],
+          },
+        };
+      };
+      return { fetchItems, cartState: [cart, setCart] };
+    },
   };
 });
 
 describe("The item page renders correctly.", () => {
   test("The main wrapper", () => {
     render(<ItemPage />, { wrapper: BrowserRouter });
-    const mainWrapper = screen.getByTestId(`item-page-${mockCategoryIds[0]}`);
+    const mainWrapper = screen.getByTestId(`item-page-${mockItems[0].sku}`);
     expect(mainWrapper).toBeInTheDocument();
   });
 
@@ -44,17 +50,12 @@ describe("The item page renders correctly.", () => {
   });
   test("The Add To Cart button", () => {
     render(<ItemPage />, { wrapper: BrowserRouter });
-    const addToCart = screen.getByRole("button", { name: "to-cart" });
+    const addToCart = screen.getByRole("button", { name: "add-to-cart" });
     expect(addToCart).toBeInTheDocument();
-  });
-  test("The Buy Now button", () => {
-    render(<ItemPage />, { wrapper: BrowserRouter });
-    const shopNow = screen.getByRole("button", { name: "buy-now" });
-    expect(shopNow).toBeInTheDocument();
   });
   test("The quantity input", () => {
     render(<ItemPage />, { wrapper: BrowserRouter });
-    const quantityInput = screen.getByRole("textbox", { name: "quantity" });
+    const quantityInput = screen.getByRole("spinbutton", { name: "quantity" });
     expect(quantityInput).toBeInTheDocument();
   });
 });
