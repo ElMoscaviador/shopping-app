@@ -5,12 +5,12 @@ import img2 from "../../assets/2.jpg";
 import img3 from "../../assets/3.jpg";
 
 const Home = () => {
-/*   useEffect(() => {
+  useEffect(() => {
     const showcasedContainer = document.querySelector(
       ".showcased-item__container"
     );
     if (showcasedContainer) swipeImages(showcasedContainer);
-  }); */
+  });
 
   const showcasedItems = [
     { name: "name 1", img: img1 },
@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <main className="home" aria-label="home">
       <div className="showcased-item__container">
-       {/*  {showcasedItems.map((item) => {
+        {showcasedItems.map((item) => {
           return (
             <div
               key={item.name}
@@ -28,7 +28,7 @@ const Home = () => {
               style={{ backgroundImage: `url(${item.img})` }}
             />
           );
-        })} */}
+        })}
       </div>
     </main>
   );
