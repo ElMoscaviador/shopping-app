@@ -45,7 +45,7 @@ const routes = [
 const Root = () => {
   return (
     <RouterProvider
-      router={(createBrowserRouter(routes), { basename: "/shopping-cart" })}
+      router={(createBrowserRouter(routes), { basename: "/eshop" })}
     />
   );
 };
