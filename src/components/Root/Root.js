@@ -43,7 +43,11 @@ const routes = [
 ];
 
 const Root = () => {
-  return <RouterProvider router={createBrowserRouter(routes)} />;
+  return (
+    <RouterProvider
+      router={(createBrowserRouter(routes), { basename: "eshop" })}
+    />
+  );
 };
 
 export default Root;
