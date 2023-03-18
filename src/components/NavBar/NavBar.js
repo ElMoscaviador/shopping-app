@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
 
-const MainNav = ({ cartLength }) => {
+const NavBar = ({ cartLength }) => {
   return (
     <nav className="main-nav" aria-label="main-nav">
       <ul className="main-nav__list" aria-label="main-nav-list">
         <li>
-          <NavLink className="main-nav__link" aria-label="main-nav-link" to="/">
-            Home
-          </NavLink>
+          <NavLink
+            className="main-nav__link"
+            aria-label="main-nav-link"
+            to="/"
+          ></NavLink>
         </li>
 
         <div
@@ -19,9 +21,7 @@ const MainNav = ({ cartLength }) => {
               className="main-nav__link"
               aria-label="main-nav-link"
               to="/shop"
-            >
-              Shop
-            </NavLink>
+            ></NavLink>
           </li>
 
           <li>
@@ -38,9 +38,7 @@ const MainNav = ({ cartLength }) => {
               className="main-nav__link"
               aria-label="main-nav-link"
               to="/cart"
-            >
-              Cart
-            </NavLink>
+            ></NavLink>
           </li>
         </div>
       </ul>
@@ -48,4 +46,4 @@ const MainNav = ({ cartLength }) => {
   );
 };
 
-export default MainNav;
+export default NavBar;

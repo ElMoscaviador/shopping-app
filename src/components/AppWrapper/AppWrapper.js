@@ -1,16 +1,11 @@
-import { Outlet } from "react-router-dom";
-import { useState } from "react";
-import { fetchItems } from "../data";
-import MainNav from "../MainNav/MainNav";
+import NavBar from "../NavBar/NavBar";
 
-const AppWrapper = () => {
-  const [cart, setCart] = useState([]);
+const App = () => {
   return (
     <div className="App">
-      <MainNav cartLength={cart.length} />
-      <Outlet context={{ cartState: [cart, setCart], fetchItems }} />
+      <NavBar/>
     </div>
   );
 };
 
-export default AppWrapper;
+export default App;
