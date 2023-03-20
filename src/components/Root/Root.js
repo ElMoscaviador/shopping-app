@@ -1,11 +1,18 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppWrapper from "../AppWrapper/AppWrapper";
+import App from "../App/App";
+import Home from "../Home/Home";
 
 const routes = [
   {
     path: "/",
-    element: <AppWrapper />,
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
   },
 ];
 

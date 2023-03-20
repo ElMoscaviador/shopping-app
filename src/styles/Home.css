@@ -1,0 +1,29 @@
+.home {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.tardis {
+    opacity: 1;
+    z-index: 1;
+    margin-right: 2rem;
+    animation: materialize 3s linear 6 both ;
+    transform:translateY(-5%)
+}
+
+@keyframes materialize {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
