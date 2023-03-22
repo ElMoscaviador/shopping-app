@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App/App";
 import Home from "../Home/Home";
+import Shop from "../Shop/Shop";
 
 const routes = [
   {
@@ -11,6 +12,10 @@ const routes = [
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
       },
     ],
   },

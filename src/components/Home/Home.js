@@ -1,4 +1,4 @@
-import Tardis from "../CosmeticElements/Tardis";
+import Tardis from "../../assets/home/Tardis";
 
 const Home = () => {
   return (
