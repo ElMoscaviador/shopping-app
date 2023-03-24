@@ -1,10 +1,14 @@
 import { React } from "react";
+import { useOutletContext, Outlet } from "react-router-dom";
 import ShopNavBar from "./ShopNavBar";
 
 const Shop = () => {
+  const [shopCategoryOpened] = useOutletContext().shopCategoryState;
+
   return (
     <main aria-label="shop" className="shop">
-      <ShopNavBar/>
+      {!shopCategoryOpened && <ShopNavBar />}
+      <Outlet context={useOutletContext()} />
     </main>
   );
 };

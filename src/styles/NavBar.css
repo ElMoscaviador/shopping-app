@@ -15,3 +15,20 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
+.navbar.with-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    justify-items: center;
+}
+
+.navbar.with-categories .shop__navbar {
+   grid-column: 1;
+}
+
+.navbar.with-categories .navbar__list {
+    grid-column: 2;
+    justify-content: space-evenly;
+ }

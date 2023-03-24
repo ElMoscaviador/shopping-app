@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const CategoryBubble = ({ category, touchEvents }) => {
   const { onTouchEnd, onTouchMove, onTouchStart } = touchEvents;
+
   return (
     <li
       aria-label="shop navbar link-group"
@@ -10,7 +11,7 @@ const CategoryBubble = ({ category, touchEvents }) => {
       <NavLink
         aria-label="shop navbar link"
         className={`shop__navbar__link ${category.name}`}
-        to={`/shop/${category.name}`}
+        to={`/shop/${category.name}/?page=1`}
       >
         <img
           alt={`category-bubble ${category.name}`}

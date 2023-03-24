@@ -2,13 +2,26 @@ import { NavLink } from "react-router-dom";
 import HomeIcon from "../../assets/navbar/HomeIcon";
 import ShopIcon from "../../assets/navbar/ShopIcon";
 import CartIcon from "../../assets/navbar/CartIcon";
+import ShopNavBar from "../Shop/ShopNavBar";
 
-const NavBar = ({ cartLength }) => {
+const NavBar = ({ cartLength, shopCategoryState }) => {
+  const [shopCategoryOpened, setShopCategoryOpened] = shopCategoryState;
+  
   return (
-    <nav className="navbar" aria-label="navbar">
-      <ul className="navbar__list" aria-label="navbar list">
+    <nav
+      className={`navbar ${shopCategoryOpened ? "with-categories" : ""}`}
+      aria-label="navbar"
+    >
+      {shopCategoryOpened && <ShopNavBar />}
+
+      <ul className={`navbar__list`} aria-label="navbar list">
         <li>
-          <NavLink className="navbar__link" aria-label="navbar link" to="/">
+          <NavLink
+            className="navbar__link"
+            aria-label="navbar link"
+            to="/"
+            onClick={() => setShopCategoryOpened(false)}
+          >
             <HomeIcon />
           </NavLink>
         </li>

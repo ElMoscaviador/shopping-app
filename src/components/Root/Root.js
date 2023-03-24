@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App/App";
 import Home from "../Home/Home";
 import Shop from "../Shop/Shop";
+import Category from "../Shop/Category";
 
 const routes = [
   {
@@ -16,6 +17,13 @@ const routes = [
       {
         path: "/shop",
         element: <Shop />,
+        children: [
+          {
+            path: ":category",
+            element: <Category />,
+            loader: ({ params }) => params,
+          },
+        ],
       },
     ],
   },
