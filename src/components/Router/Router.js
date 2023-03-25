@@ -29,9 +29,9 @@ const routes = [
   },
 ];
 
-const Root = () => {
+const Router = () => {
   return <RouterProvider router={createBrowserRouter(routes)} />;
 };
 
-export default Root;
+export default Router;
 export { routes };

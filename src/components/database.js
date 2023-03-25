@@ -62,25 +62,25 @@ const items = [
   {
     category: "figure",
     sku: "figure-dalek",
-    name: "The Dalek",
+    name: "Dalek",
     price: 25,
   },
   {
     category: "figure",
     sku: "figure-sontaran",
-    name: "The Sontaran",
+    name: "Sontaran",
     price: 47,
   },
   {
     category: "figure",
     sku: "figure-weeping_angel",
-    name: "The Weeping Angel",
+    name: "Weeping Angel",
     price: 68,
   },
   {
     category: "figure",
     sku: "figure-zygon",
-    name: "The Zygon",
+    name: "Zygon",
     price: 18,
   },
 ];

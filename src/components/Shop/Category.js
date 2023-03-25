@@ -11,8 +11,8 @@ import NavButtons from "./NavButtons";
 
 const Category = () => {
   const { category } = useLoaderData();
-  const [, setShopCategoryOpened] = useOutletContext().shopCategoryState;
-
+  const { setCurrentCategory, shopCategoryState } = useOutletContext();
+  const [, setShopCategoryOpened] = shopCategoryState;
   const categoryItems = fetchCategoryItems(category);
   const currentPage = Number(useSearchParams()[0].get("page"));
   const maxItemsPerPage = 4;
@@ -28,8 +28,15 @@ const Category = () => {
 
   useEffect(() => {
     shouldRedirect && navigate("?page=1");
-    setShopCategoryOpened(true)
-  }, [navigate, shouldRedirect, setShopCategoryOpened]);
+    setShopCategoryOpened(true);
+    setCurrentCategory(category);
+  }, [
+    category,
+    navigate,
+    setCurrentCategory,
+    setShopCategoryOpened,
+    shouldRedirect,
+  ]);
 
   return (
     <main aria-label="category" className={`category ${category}`}>

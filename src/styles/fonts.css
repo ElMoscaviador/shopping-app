@@ -1,6 +1,13 @@
 /* BBC Reith */
 
 @font-face {
+    font-family: 'BBCReithSans-Light';
+    src: url(../assets/shared/fonts/BBC\ Reith/sans/BBCReithSans_Lt.ttf) format('truetype');
+    font-style:normal;
+    font-weight: 300;
+}
+
+@font-face {
     font-family: 'BBCReithSans-Regular';
     src: url(../assets/shared/fonts/BBC\ Reith/sans/BBCReithSans_Rg.ttf) format('truetype');
     font-style:normal;

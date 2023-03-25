@@ -38,11 +38,15 @@
 .item-thumbnail__name {
     font-family: BBCReithSans-Regular;
     font-size: 14px;
+    max-width: 10ch;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .item-thumbnail__price {
     font-family: BBCReithSans-Bold;
     font-size: 14px;
+    max-width: 4ch;
 }
 
 .page-browser {
