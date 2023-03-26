@@ -3,7 +3,7 @@ import {
   useLoaderData,
   useOutletContext,
   useSearchParams,
-  useNavigate,
+  Outlet
 } from "react-router-dom";
 import { fetchCategoryItems } from "../database";
 import ItemThumbnail from "./ItemThumbnail";
@@ -14,11 +14,11 @@ const Category = () => {
   const { setCurrentCategory, shopCategoryState } = useOutletContext();
   const [, setShopCategoryOpened] = shopCategoryState;
   const categoryItems = fetchCategoryItems(category);
-  const currentPage = Number(useSearchParams()[0].get("page"));
   const maxItemsPerPage = 4;
   const totalNumberOfPages = Math.round(categoryItems.length / maxItemsPerPage);
-  const shouldRedirect = !currentPage || currentPage > totalNumberOfPages;
-  const navigate = useNavigate();
+  const pageReceived = Number(useSearchParams()[0].get("page"));
+  const currentPage =
+    pageReceived && pageReceived <= totalNumberOfPages ? pageReceived : 1;
 
   function currentItemsToDisplay() {
     const startIndex = (currentPage - 1) * maxItemsPerPage;
@@ -27,16 +27,9 @@ const Category = () => {
   }
 
   useEffect(() => {
-    shouldRedirect && navigate("?page=1");
     setShopCategoryOpened(true);
     setCurrentCategory(category);
-  }, [
-    category,
-    navigate,
-    setCurrentCategory,
-    setShopCategoryOpened,
-    shouldRedirect,
-  ]);
+  }, [category, setCurrentCategory, setShopCategoryOpened]);
 
   return (
     <main aria-label="category" className={`category ${category}`}>
@@ -49,6 +42,7 @@ const Category = () => {
           totalNumberOfPages={totalNumberOfPages}
         />
       )}
+      <Outlet context={useOutletContext()}/>
     </main>
   );
 };

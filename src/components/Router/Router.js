@@ -4,6 +4,8 @@ import App from "../App/App";
 import Home from "../Home/Home";
 import Shop from "../Shop/Shop";
 import Category from "../Shop/Category";
+import Item from "../Shop/Item";
+import Cart from "../Cart/Cart";
 
 const routes = [
   {
@@ -23,7 +25,18 @@ const routes = [
             element: <Category />,
             loader: ({ params }) => params,
           },
+          {
+            path: ":category/:sku",
+            element: <Item />,
+            loader: ({ params }) => {
+              return { sku: params.sku, category: params.category };
+            },
+          },
         ],
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },

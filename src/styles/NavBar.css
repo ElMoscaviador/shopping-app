@@ -8,6 +8,23 @@
     margin-bottom: 2rem;
 }
 
+.navbar__counter {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.541);
+    font-family: BBCReithSans-Bold;
+}
+
+.navbar__counter-text {
+    color: #ffd893ff;
+    font-family: BBCReithSans-Bold;
+    pointer-events: none;
+}
+
 .navbar__list {
     display: flex;
     width: 100%;
@@ -25,10 +42,10 @@
 }
 
 .navbar.with-categories .shop__navbar {
-   grid-column: 1;
+    grid-column: 1;
 }
 
 .navbar.with-categories .navbar__list {
     grid-column: 2;
     justify-content: space-evenly;
- }
+}

@@ -6,10 +6,10 @@ const Shop = () => {
   const [shopCategoryOpened] = useOutletContext().shopCategoryState;
 
   return (
-    <main aria-label="shop" className="shop">
+    <div aria-label="shop" className="shop">
       {!shopCategoryOpened && <ShopNavBar />}
       <Outlet context={useOutletContext()} />
-    </main>
+    </div>
   );
 };
 

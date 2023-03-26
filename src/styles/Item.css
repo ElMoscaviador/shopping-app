@@ -1,0 +1,178 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    align-items: flex-start;
+}
+
+.item__left {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin-left: 1rem;
+
+}
+
+.item__title {
+    font-family: BBCReithSans-ExtraBoldItalic;
+    background: linear-gradient(90deg, rgba(209, 155, 46, 1) 0%, rgba(165, 63, 162, 0.99) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.item__description {
+    font-family: BBCReithSans-Regular;
+    color: #ff9ce2ff;
+    font-size: 12px;
+    margin-bottom: 1rem;
+}
+
+.item__picture {
+    position: absolute;
+    margin-right: 1rem;
+    z-index: -1;
+    transform: translateY(10%);
+    height: 100%;
+}
+
+.item__picture.costume-9 {
+    right: 5%;
+}
+
+.item__picture.costume-10 {
+    right: 5%;
+}
+
+.item__picture.costume-11 {
+    right: 0;
+}
+
+.item__picture.costume-12 {
+    right: 5%;
+}
+
+.item__picture.costume-13 {
+    right: 0;
+}
+
+.item__picture.costume-15 {
+    right: 0;
+}
+
+.item__picture.sonic-10 {
+    right: 5%;
+    width: 60%;
+    height: auto;
+    bottom: 15%;
+}
+
+.item__picture.sonic-11 {
+    right: 5%;
+    width: 50%;
+    height: auto;
+    bottom: 15%;
+    transform: rotate(-40deg);
+}
+
+.item__picture.sonic-13 {
+    right: 0;
+    width: 60%;
+    height: auto;
+    bottom: 5%;
+    transform: rotate(-40deg);
+}
+
+.item__picture.figure-dalek {
+    right: 0;
+    width: 50%;
+    height: auto;
+    bottom: 0;
+}
+
+.item-page__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 180px;
+}
+
+.item__picture.figure-sontaran {
+    right: 0;
+    width: 40%;
+    height: auto;
+    bottom: 0;
+}
+
+.item__picture.figure-weeping_angel {
+    right: 0;
+    width: 40%;
+    height: auto;
+    bottom: -5%;
+}
+
+.item__picture.figure-sontaran {
+    right: 0;
+    width: 40%;
+    height: auto;
+}
+
+.item__picture.figure-zygon {
+    right: 5%;
+    width: 30%;
+    bottom: -5%;
+    height: auto;
+}
+
+.quantity-input {
+    font-family: BBCReithSans-Regular;
+    width: 30px;
+    background: linear-gradient(90deg, rgba(255, 68, 147, 0.77) 0%, rgba(255, 170, 147, 0.99) 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 18px;
+    border: none;
+    align-self: center;
+    text-align: center;
+    transform: translateY(1px);
+
+}
+
+.quantity-modifier__button {
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    width: 21px;
+    height: 21px;
+    background: linear-gradient(90deg, rgba(182, 30, 147, 0.44) 0%, rgba(48, 57, 166, 0.65) 100%);
+}
+
+.gradient-clip-background {
+    display: grid;
+    font-family: BBCReithSans-Bold;
+    background: linear-gradient(90deg, rgba(255, 68, 147, 0.77) 0%, rgba(255, 170, 147, 0.99) 100%);
+    background-clip: text;
+}
+
+.sign {
+    font-family: BBCReithSans-Bold;
+    font-size: 18px;
+    color: transparent;
+}
+
+.item-page__add-to-cart {
+    border: none;
+    background: linear-gradient(90deg, rgba(182, 30, 147, 0.44) 0%, rgba(48, 57, 166, 0.65) 100%);
+    border-radius: 30px;
+    color: transparent;
+    width: 90px;
+    height: 27px;
+    font-size: 10px;
+    margin-right: 0.5rem;
+    transform: translateY(-20%);
+    cursor: pointer;
+}

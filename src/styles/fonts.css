@@ -21,3 +21,9 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: 'BBCReithSans-ExtraBoldItalic';
+    src: url(../assets/shared/fonts/BBC\ Reith/sans/BBCReithSans_ExBdIt.ttf) format('truetype');
+    font-style:italic;
+    font-weight: 900;
+}

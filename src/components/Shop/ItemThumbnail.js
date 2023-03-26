@@ -1,6 +1,12 @@
+import { NavLink } from "react-router-dom";
+
 const ItemThumbnail = ({ item }) => {
   return (
-    <div aria-label="item-thumbnail" className="item-thumbnail">
+    <NavLink
+      aria-label="item-thumbnail"
+      className="item-thumbnail"
+      to={`${item.sku}`}
+    >
       <img
         alt="item thumbnail"
         aria-label="item thumbnail image"
@@ -9,7 +15,7 @@ const ItemThumbnail = ({ item }) => {
       />
       <div aria-label="item thumbnail info" className="item-thumbnail__info">
         <span aria-label="item thumbnail name" className="item-thumbnail__name">
-          {item.name}
+          {item.name.short}
         </span>
         <span
           aria-label="item thumbnail price"
@@ -18,7 +24,7 @@ const ItemThumbnail = ({ item }) => {
           £{item.price}
         </span>
       </div>
-    </div>
+    </NavLink>
   );
 };
 
