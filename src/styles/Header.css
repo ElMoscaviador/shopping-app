@@ -1,31 +1,38 @@
 .header {
-    display: grid;
-    position: absolute;
-    top: 0;
-    height: 44px;
-    width: 100%;
     background: linear-gradient(90deg, rgba(40, 18, 102, 0.99) 0%, rgba(0, 32, 60, 0.75) 100%);
     border-bottom: 1px solid #ffd893ff;
+    display: grid;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .header__logo {
-    z-index: 1;
-    position: absolute;
-    width: 150px;
-    transform: translateY(1%);
     justify-self: center;
+    position: absolute;
+    transform: translateY(1%);
+    width: clamp(150px, 20vw - 2vh, 300px);
+    z-index: 1;
+
 }
 
 .header__title {
-    justify-self: flex-start;
     align-self: center;
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgba(255, 216, 147, 0.84) 0%, rgba(249, 29, 148, 0.44) 100%);
+    color: transparent;
+    font-family: BBCReithSans-Light;
+    font-size: clamp(16px, 2vw, 22px);
+    justify-self: flex-start;
     margin-left: 1rem;
     transform: translateY(2px);
     z-index: 1;
-    font-family: BBCReithSans-Light;
-    font-size: 16px;
-    background-image: linear-gradient(90deg, rgba(255, 216, 147, 0.84) 0%, rgba(249, 29, 148, 0.44) 100%);
-    color: transparent;
-    background-clip: text;
+}
 
+@media (max-height: 1000px) {
+    .header__logo {
+        width: clamp(100px, 20vh, 300px);
+        z-index: 1;
+    }
 }

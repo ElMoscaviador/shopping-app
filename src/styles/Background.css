@@ -2,6 +2,8 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    min-height: 530px;
+
 }
 
 .background-layer__gradient {

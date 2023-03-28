@@ -3,9 +3,9 @@ import CategoryBubble from "./CategoryBubble";
 
 const ShopNavBar = () => {
   const [categories, setCategories] = useState([
-    { direction: "left", name: "sonic", status: "unfocused" },
-    { direction: "center", name: "costume", status: "focused" },
-    { direction: "right", name: "figure", status: "unfocused" },
+    { direction: "left", name: "sonics", status: "unfocused" },
+    { direction: "center", name: "costumes", status: "focused" },
+    { direction: "right", name: "figures", status: "unfocused" },
   ]);
   const [touchHistory, setTouchHistory] = useState({});
 
@@ -17,10 +17,12 @@ const ShopNavBar = () => {
   }
 
   function assignCurrentTouchAsEndTouch(currentTouch) {
-    setTouchHistory((prev) => ({
-      ...prev,
-      end: currentTouch,
-    }));
+    setTouchHistory((prev) => {
+      return {
+        ...prev,
+        end: currentTouch,
+      };
+    });
   }
 
   function fetchDOMCategories() {
@@ -34,13 +36,28 @@ const ShopNavBar = () => {
   }
 
   function isLeftSwipe() {
-    return getSwipeDistance() > 50;
+    const isMoreThan50 = getSwipeDistance() > 50;
+    return isMoreThan50;
+  }
+
+  function onDragEnd() {
+    resetCategoryPositionsinDOM();
+    updateCategoryPositionsInState();
+  }
+
+  function onDragOver(event) {
+    if (touchHistory.start) animateCategoriesPositionsInDOM();
+    assignCurrentTouchAsEndTouch(event.clientX);
+  }
+
+  function onPointerDown(event) {
+    setTouchHistory({ start: event.clientX, end: null });
   }
 
   function onTouchEnd() {
     if (!touchHistory.start || !touchHistory.end) return;
     resetCategoryPositionsinDOM();
-    updateCategoryPositionsinState();
+    updateCategoryPositionsInState();
   }
 
   function onTouchMove(event) {
@@ -63,19 +80,21 @@ const ShopNavBar = () => {
     setTouchHistory({ start: firstTouch, end: null });
   }
 
-  function updateCategoryPositionsinState() {
+  function updateCategoryPositionsInState() {
+    const leftSwipeCheck = isLeftSwipe();
+
     setCategories((previousCategories) => [
       {
         ...previousCategories[0],
-        name: previousCategories[isLeftSwipe() ? 1 : 2].name,
+        name: previousCategories[leftSwipeCheck ? 1 : 2].name,
       },
       {
         ...previousCategories[1],
-        name: previousCategories[isLeftSwipe() ? 2 : 0].name,
+        name: previousCategories[leftSwipeCheck ? 2 : 0].name,
       },
       {
         ...previousCategories[2],
-        name: previousCategories[isLeftSwipe() ? 0 : 1].name,
+        name: previousCategories[leftSwipeCheck ? 0 : 1].name,
       },
     ]);
   }
@@ -83,16 +102,25 @@ const ShopNavBar = () => {
   return (
     <nav aria-label="shop navbar" className="shop__navbar">
       <ul aria-label="shop navbar list" className="shop__navbar__list">
-        {categories.map((category) => (
-          <CategoryBubble
-            category={category}
-            key={category.name}
-            touchEvents={{ onTouchEnd, onTouchMove, onTouchStart }}
-          />
-        ))}
+        {categories.map((category) => {
+          return (
+            <CategoryBubble
+              category={category}
+              key={category.name}
+              touchEvents={{
+                onTouchEnd,
+                onTouchMove,
+                onTouchStart,
+                onPointerDown,
+                onDragOver,
+                onDragEnd,
+              }}
+            />
+          );
+        })}
       </ul>
     </nav>
   );
 };
 
-export default ShopNavBar
+export default ShopNavBar;

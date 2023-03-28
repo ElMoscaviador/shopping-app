@@ -1,17 +1,20 @@
 .home {
-    display: flex;
-    justify-content: flex-end;
     align-items: center;
+    display: flex;
     height: 100%;
+    justify-content: flex-end;
     width: 100%;
 }
 
 .tardis {
+    animation: materialize 3s linear infinite both;
+    width: clamp(200px, 30%, 400px);
     opacity: 1;
-    z-index: 1;
     margin-right: 2rem;
-    animation: materialize 3s linear 6 both ;
-    transform:translateY(-5%)
+    transform: translateY(-5%);
+    width: 40%;
+    max-width: 400px;
+    min-width: 200px;
 }
 
 @keyframes materialize {
@@ -25,5 +28,26 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (min-width: 1000px) {
+    .tardis {
+        transform: translateX(-20%);
+    }
+}
+
+@media (min-width: 2000px) {
+    .tardis {
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 3000px) {
+    .home {
+        justify-content: center;
+    }
+    .tardis {
+        transform: translateX(150%);
     }
 }

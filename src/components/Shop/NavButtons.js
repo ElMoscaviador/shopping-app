@@ -9,7 +9,7 @@ const NavButtons = ({ currentPage, totalNumberOfPages }) => {
           className="page-browser left"
           to={`?page=${currentPage - 1}`}
         >
-          <span className="arrow left" />
+          <img alt="left arrow" aria-label="arrow" className="arrow left" src={require('../../assets/shared/arrow-left.png')} />
         </NavLink>
       )}
       {currentPage !== totalNumberOfPages && (
@@ -18,7 +18,7 @@ const NavButtons = ({ currentPage, totalNumberOfPages }) => {
           className="page-browser right"
           to={`?page=${currentPage + 1}`}
         >
-          <span className="arrow right" />
+          <img alt="right arrow" aria-label="arrow" className="arrow right" src={require('../../assets/shared/arrow-right.png')} />
         </NavLink>
       )}
     </>

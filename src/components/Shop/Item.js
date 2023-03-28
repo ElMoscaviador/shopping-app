@@ -22,6 +22,7 @@ const Item = () => {
         <ItemShowcase item={item} />
         <ItemForm sku={sku} />
       </div>
+      
       <img
         aria-label="item picture"
         className={`item__picture ${sku}`}

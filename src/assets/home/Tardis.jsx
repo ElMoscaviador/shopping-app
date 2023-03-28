@@ -6,8 +6,6 @@ function Tardis() {
       className="tardis"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="199.014"
-      height="321.475"
       version="1.1"
       viewBox="0 0 52.656 85.057"
       xmlSpace="preserve"

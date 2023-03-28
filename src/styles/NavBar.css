@@ -1,48 +1,67 @@
 .navbar {
-    height: 70px;
-    width: 285px;
     background-image: url('../assets/navbar/NavBarBackground.svg');
+    background-repeat: no-repeat;
     background-size: 100%;
-    position: fixed;
     bottom: 0;
+    height: calc(var(--width)/ 4.07);
     margin-bottom: 2rem;
+    position: absolute;
+    --width: clamp(285px, 20vw, 450px);
+    width: var(--width);
 }
 
 .navbar__counter {
+    background: rgba(0, 0, 0, 0.541);
+    border-radius: 50%;
     display: grid;
+    font-family: var(--ff-bold);
+    height: 20px;
     place-items: center;
     position: absolute;
-    border-radius: 50%;
     width: 20px;
-    height: 20px;
-    background: rgba(0, 0, 0, 0.541);
-    font-family: BBCReithSans-Bold;
 }
 
 .navbar__counter-text {
     color: #ffd893ff;
-    font-family: BBCReithSans-Bold;
+    font-family: var(--ff-bold);
     pointer-events: none;
 }
 
 .navbar__list {
-    display: flex;
-    width: 100%;
-    height: 100%;
     align-items: center;
+    display: flex;
+    height: 100%;
     justify-content: space-evenly;
+    width: 100%;
 }
 
+.navbar__link svg {
+    width: clamp(32px, 3vw, 62px)
+}
+
+.navbar__link svg:hover {
+    transform: scale(1.1);
+} 
+
 .navbar.with-categories {
+    align-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    align-content: center;
     justify-items: center;
 }
 
 .navbar.with-categories .shop__navbar {
     grid-column: 1;
+}
+
+.navbar.with-categories .category-bubble {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar.with-categories svg {
+    width: clamp(32px, 3vw, 40px)
 }
 
 .navbar.with-categories .navbar__list {

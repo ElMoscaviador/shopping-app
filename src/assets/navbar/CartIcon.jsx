@@ -5,8 +5,6 @@ function CartIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="32"
-      height="36"
       version="1.1"
       viewBox="0 0 8.467 9.525"
       xmlSpace="preserve"

@@ -1,0 +1,12 @@
+:root {
+    --xs: 0.5rem;
+    --s: 1rem;
+    --sm: 1.5rem;
+    --m: 2rem;
+    --ml: 2.5rem;
+    --l: 3rem;
+    --ff-extrabold: BBCReithSans-ExtraBoldItalic;
+    --ff-bold: BBCReithSans-Bold;
+    --ff-light: BBCReithSans-Light;
+    --ff-regular: BBCReithSans-Regular;
+}
