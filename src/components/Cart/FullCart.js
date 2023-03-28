@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useOutletContext, useSearchParams } from "react-router-dom";
 import { calculatePrice } from "../handlers";
 import { updateItemQuantityInCart } from "../handlers";
 import { fetchSpecificItem } from "../database";
 import QuantityModifierButton from "../QuantityModifier/QuantityModifierButton";
-import NavButtons from "../Shop/NavButtons";
+import NavButtons from "../NavButtons/NavButtons";
 
 const FullCart = () => {
   const { cartState, setCurrentCategory } = useOutletContext();
   const [cart, setCart] = cartState;
   const maxItemsPerPage = 3;
-  const totalNumberOfPages = Math.round(cart.length / maxItemsPerPage);
+  const totalNumberOfPages = Math.ceil(cart.length / maxItemsPerPage);
 
   const [searchParams] = useSearchParams();
 
@@ -36,12 +36,18 @@ const FullCart = () => {
         const currentItemData = fetchSpecificItem(sku);
         return (
           <div aria-label="cart item box" className="cart__item-box" key={sku}>
-            <img
-              alt="item thumbnail"
-              aria-label="item thumbnail image"
-              className="item-thumbnail__image"
-              src={require(`../../assets/products/thumbnail/${currentItemData.sku}.png`)}
-            />
+            <div
+              aria-label="item thumbnail wrapper"
+              className="item-thumbnail__wrapper"
+            >
+              <div className="item-thumbnail__front" />
+              <img
+                alt="item thumbnail"
+                className={`item-thumbnail ${sku}`}
+                src={require(`../../assets/products/thumbnail/${sku}.png`)}
+              />
+              <div className="item-thumbnail__back" />
+            </div>
             <div aria-label="cart item info" className="cart__item__info">
               <h3 aria-label="cart item name" className="cart__item__name">
                 {currentItemData.name.full.toUpperCase()}

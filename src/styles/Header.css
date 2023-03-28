@@ -30,7 +30,7 @@
     z-index: 1;
 }
 
-@media (max-height: 1000px) {
+@media (max-height: 1500px) {
     .header__logo {
         width: clamp(100px, 20vh, 300px);
         z-index: 1;

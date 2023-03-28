@@ -8,6 +8,7 @@
     position: absolute;
     --width: clamp(285px, 20vw, 450px);
     width: var(--width);
+    z-index: 1;
 }
 
 .navbar__counter {

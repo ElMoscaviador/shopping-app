@@ -3,11 +3,11 @@ import {
   useLoaderData,
   useOutletContext,
   useSearchParams,
-  Outlet
+  Outlet,
 } from "react-router-dom";
 import { fetchCategoryItems } from "../database";
 import ItemThumbnail from "./ItemThumbnail";
-import NavButtons from "./NavButtons";
+import NavButtons from "../NavButtons/NavButtons";
 
 const Category = () => {
   const { category } = useLoaderData();
@@ -15,7 +15,7 @@ const Category = () => {
   const [, setShopCategoryOpened] = shopCategoryState;
   const categoryItems = fetchCategoryItems(category);
   const maxItemsPerPage = 4;
-  const totalNumberOfPages = Math.round(categoryItems.length / maxItemsPerPage);
+  const totalNumberOfPages = Math.ceil(categoryItems.length / maxItemsPerPage);
   const pageReceived = Number(useSearchParams()[0].get("page"));
   const currentPage =
     pageReceived && pageReceived <= totalNumberOfPages ? pageReceived : 1;
@@ -42,7 +42,7 @@ const Category = () => {
           totalNumberOfPages={totalNumberOfPages}
         />
       )}
-      <Outlet context={useOutletContext()}/>
+      <Outlet context={useOutletContext()} />
     </main>
   );
 };

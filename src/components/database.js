@@ -7,7 +7,7 @@ const categories = [
 const items = [
   {
     category: "sonics",
-    description: `Reverse the polarity with the Tenth Doctor's sonic screwdriver.`,
+    description: `Reverse the polarity of the neutron flow with the Tenth Doctor's sonic screwdriver.`,
     sku: "sonic-10",
     name: { short: "10th Sonic", full: `The Tenth Doctor's Sonic` },
     price: 5,
@@ -22,7 +22,7 @@ const items = [
   {
     category: "sonics",
     description:
-      "Never get stuck in the time vortex again with this handcrafted Thirteenth Doctor sonic screwdriver.",
+      "Never get stuck in the Flux again with this handcrafted Thirteenth Doctor sonic screwdriver.",
     sku: "sonic-13",
     name: { short: "13th Sonic", full: `The Thirteenth Doctor's Sonic` },
     price: 6.5,
@@ -66,7 +66,7 @@ const items = [
   },
   {
     category: "costumes",
-    description: `Don't regenerate into David Tennant with this handcrafted Fifteenth Doctor costume.`,
+    description: `Don't accidentally regenerate into David Tennant with this handcrafted Fifteenth Doctor costume.`,
     sku: "costume-15",
     name: { short: "Fifteen", full: `The Fifteenth Doctor` },
     price: 65,
@@ -74,7 +74,7 @@ const items = [
   {
     category: "figures",
     description:
-      "Exterminate your boredom by playing with this high end Dalek action figure.",
+      "Exterminate your boredom and invade Earth with this high end Dalek action figure.",
     sku: "figure-dalek",
     name: { short: "Dalek", full: `The Dalek` },
     price: 25,
@@ -82,7 +82,7 @@ const items = [
   {
     category: "figures",
     description:
-      "Become a potato-headed warrior yourself & conquer the universe with this handcrafted Sontaran action figure.",
+      "Become a potato-headed warrior & conquer the universe with this handcrafted Sontaran action figure.",
     sku: "figure-sontaran",
     name: { short: "Sontaran", full: `The Sontaran` },
     price: 47,
