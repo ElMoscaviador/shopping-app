@@ -8,7 +8,8 @@
     position: absolute;
     --width: clamp(285px, 20vw, 450px);
     width: var(--width);
-    z-index: 1;
+    z-index: 3;
+
 }
 
 .navbar__counter {
@@ -20,6 +21,7 @@
     place-items: center;
     position: absolute;
     width: 20px;
+    z-index: 1;
 }
 
 .navbar__counter-text {
@@ -42,7 +44,7 @@
 
 .navbar__link svg:hover {
     transform: scale(1.1);
-} 
+}
 
 .navbar.with-categories {
     align-content: center;
