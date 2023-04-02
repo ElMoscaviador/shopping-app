@@ -1,0 +1,9 @@
+.Header {
+    background: linear-gradient(90deg, rgba(40, 18, 102, 0.99) 0%, rgba(0, 32, 60, 0.75) 100%);
+    border-bottom: 1px solid #ffd893ff;
+    display: grid;
+    height: 44px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

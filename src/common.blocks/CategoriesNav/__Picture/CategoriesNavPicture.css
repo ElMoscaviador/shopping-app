@@ -1,0 +1,8 @@
+.Categories-Nav__Picture {
+    position: relative;
+    width: clamp(130px, 15vw, 180px);
+}
+
+.Categories-Nav__Picture:hover {
+    scale: 1.1;
+}

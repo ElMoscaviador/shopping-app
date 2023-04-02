@@ -1,0 +1,10 @@
+.Nav-Arrow__Picture--browse--next {
+    justify-self: flex-end;
+}
+
+@media (min-width: 2500px) {
+    .Nav-Arrow__Picture--browse--next {
+        justify-self: flex-end;
+        transform: translateX(-100%);
+    }
+}

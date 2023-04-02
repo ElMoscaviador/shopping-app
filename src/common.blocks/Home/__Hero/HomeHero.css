@@ -1,0 +1,47 @@
+.Home__Hero {
+    animation: materialize 3s linear infinite both;
+    margin-right: var(--m);
+    opacity: 1;
+    transform: translateY(-5%);
+    width: clamp(200px, 30%, 400px);
+}
+
+
+@media (min-width: 1000px) {
+    .Home__Hero {
+        transform: translateX(-20%);
+    }
+}
+
+@media (min-width: 2000px) {
+    .Home__Hero {
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 3000px) {
+    .Home__Hero {
+        transform: translateX(150%);
+    }
+}
+
+@media (min-width: 1000px) and (max-height: 1000px) {
+    .Home__Hero {
+        width: clamp(200px, 30vh, 400px);
+
+    }
+}
+
+@keyframes materialize {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

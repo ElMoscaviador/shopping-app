@@ -1,0 +1,7 @@
+.Nav-Bar__List {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-evenly;
+    width: 100%;
+}

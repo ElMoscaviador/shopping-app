@@ -1,0 +1,4 @@
+.Nav-Arrow__Picture {
+    height: clamp(10px, 1vw, 30px);
+    transform: translateX(-50%);
+}

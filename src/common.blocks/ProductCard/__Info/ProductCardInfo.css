@@ -1,0 +1,13 @@
+.Product-Card__Info {
+    align-self: flex-end;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    bottom: 0px;
+    color: #ffd893ff;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+}

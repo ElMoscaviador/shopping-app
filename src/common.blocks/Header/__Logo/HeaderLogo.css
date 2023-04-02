@@ -1,0 +1,14 @@
+.Header__Logo {
+    justify-self: center;
+    position: absolute;
+    transform: translateY(1%);
+    width: clamp(150px, 20vw - 2vh, 300px);
+    z-index: 1;
+}
+
+@media (max-height: 1500px) {
+    .Header__Logo {
+        width: clamp(100px, 20vh, 300px);
+        z-index: 1;
+    }
+}

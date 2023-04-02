@@ -1,0 +1,6 @@
+.Background__Layer {
+    height: inherit;
+    min-height: inherit;
+    position: absolute;
+    width: inherit;
+}

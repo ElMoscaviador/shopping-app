@@ -1,0 +1,5 @@
+.Nav-Bar__Counter-Text {
+    color: #ffd893ff;
+    font-family: var(--ff-bold);
+    pointer-events: none;
+}

@@ -1,0 +1,13 @@
+.Home {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+@media (min-width: 3000px) {
+    .Home {
+        justify-content: center;
+    }
+}

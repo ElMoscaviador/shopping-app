@@ -5,8 +5,11 @@
     --m: 2rem;
     --ml: 2.5rem;
     --l: 3rem;
-    --ff-extrabold: BBCReithSans-ExtraBoldItalic;
-    --ff-bold: BBCReithSans-Bold;
     --ff-light: BBCReithSans-Light;
+    --ff-lightitalic: BBCReithSans-LightItalic;
     --ff-regular: BBCReithSans-Regular;
+    --ff-bold: BBCReithSans-Bold;
+    --ff-extrabold: BBCReithSans-ExtraBold;
+    --ff-extrabolditalic: BBCReithSans-ExtraBoldItalic;
+
 }

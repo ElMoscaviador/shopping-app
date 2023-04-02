@@ -1,0 +1,7 @@
+.Product-Card__Name {
+    font-family: var(--ff-regular);
+    font-size: clamp(14px, 1.5vw, 22px);
+    max-width: 10ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

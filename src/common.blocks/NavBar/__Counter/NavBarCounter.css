@@ -1,0 +1,11 @@
+.Nav-Bar__Counter {
+    background: rgba(0, 0, 0, 0.541);
+    border-radius: 50%;
+    display: grid;
+    font-family: var(--ff-bold);
+    height: 20px;
+    place-items: center;
+    position: absolute;
+    width: 20px;
+    z-index: 1;
+}

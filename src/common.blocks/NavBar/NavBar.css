@@ -1,0 +1,12 @@
+.Nav-Bar {
+    background-image: url('./NavBar.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: 0;
+    height: calc(var(--width)/ 4.07);
+    margin-bottom: var(--m);
+    position: absolute;
+    width: var(--width);
+    z-index: 3;
+    --width: clamp(285px, 20vw, 450px);
+}

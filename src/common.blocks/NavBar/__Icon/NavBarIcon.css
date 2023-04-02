@@ -1,0 +1,7 @@
+.Nav-Bar__Icon {
+    width: clamp(32px, 3vw, 62px)
+}
+
+.Nav-Bar__Icon:hover {
+    transform: scale(1.1);
+}

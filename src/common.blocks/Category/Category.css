@@ -1,0 +1,11 @@
+.Category {
+    align-content: center;
+    background-color: #021737ff;
+    display: grid;
+    justify-content: center;
+    gap: clamp(3rem, 5vw, 8rem);
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: 100%;
+    width: 100%;
+}

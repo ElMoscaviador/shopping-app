@@ -1,0 +1,8 @@
+.Categories-Nav__Picture--status--unfocused {
+    z-index: 0;
+}
+
+.Categories-Nav__Picture--status--focused {
+    transform: scale(1.1);
+    z-index: 1;
+}

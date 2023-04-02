@@ -1,0 +1,11 @@
+.Nav-Arrow--browse--previous {
+    border-radius: 0px 60px 60px 0px;
+    left: 0;
+}
+
+@media (min-width: 2500px) {
+    .Nav-Arrow--browse--previous {
+        border-radius: 50%;
+        left: 30%;
+    }
+}

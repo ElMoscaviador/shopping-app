@@ -1,0 +1,25 @@
+.Nav-Bar--categories-displayed {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+.Nav-Bar--categories-displayed .Categories-Nav {
+    grid-column: 1;
+}
+
+.Nav-Bar--categories-displayed .Categories-Nav__Picture {
+    height: 100%;
+    width: 100%;
+}
+
+.Nav-Bar--categories-displayed .Nav-Bar__List {
+    grid-column: 2;
+    justify-content: space-evenly;
+}
+
+.Nav-Bar--categories-displayed .Nav-Bar__Icon {
+    width: clamp(32px, 3vw, 40px)
+}

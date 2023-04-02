@@ -1,0 +1,9 @@
+.Product-Card__Info--transparent {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    z-index: 1;
+}
+
+.Product-Card__Info--transparent .Product-Card__Name .Product-Card__Price {
+    opacity: 0;
+}

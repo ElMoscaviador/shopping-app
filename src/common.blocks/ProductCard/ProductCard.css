@@ -1,0 +1,12 @@
+.Product-Card {
+    background: linear-gradient(90deg, rgba(144, 12, 187, 1) 0%, rgba(85, 17, 205, 0.09) 100%);
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    height: clamp(130px, 20vw, 200px);
+    overflow: hidden;
+    justify-content: center;
+    position: relative;
+    width: clamp(130px, 20vw, 200px);
+}
+

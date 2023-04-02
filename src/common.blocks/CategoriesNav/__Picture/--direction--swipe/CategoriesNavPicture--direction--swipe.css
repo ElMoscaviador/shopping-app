@@ -1,0 +1,65 @@
+.Categories-Nav__Picture--direction--left.Categories-Nav__Picture--swipe--left {
+    animation: left-to-right 0.5s linear forwards;
+    z-index: 0;
+}
+
+.Categories-Nav__Picture--direction--left.Categories-Nav__Picture--swipe--right {
+    animation: left-to-center 0.5s linear forwards;
+    z-index: 1;
+}
+
+.Categories-Nav__Picture--direction--center.Categories-Nav__Picture--swipe--left {
+    animation: center-to-left 0.5s linear forwards;
+    z-index: 0;
+}
+
+.Categories-Nav__Picture--direction--center.Categories-Nav__Picture--swipe--right {
+    animation: center-to-right 0.5s linear forwards;
+    z-index: 0;
+}
+
+.Categories-Nav__Picture--direction--right.Categories-Nav__Picture--swipe--left {
+    animation: right-to-center 0.5s linear forwards;
+    z-index: 1;
+}
+
+.Categories-Nav__Picture--direction--right.Categories-Nav__Picture--swipe--right {
+    animation: right-to-left 0.5s linear forwards;
+    z-index: 0;
+}
+
+@keyframes center-to-left {
+    to {
+        transform: translateX(-75%);
+    }
+}
+
+@keyframes center-to-right {
+    to {
+        transform: translateX(75%);
+    }
+}
+
+@keyframes left-to-center {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes left-to-right {
+    to {
+        transform: translateX(175%);
+    }
+}
+
+@keyframes right-to-left {
+    to {
+        transform: translateX(-175%);
+    }
+}
+
+@keyframes right-to-center {
+    to {
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,7 @@
+.Categories-Nav__Picture--direction--left {
+    transform: translateX(25%);
+}
+
+.Categories-Nav__Picture--direction--right {
+    transform: translateX(-25%);
+}
