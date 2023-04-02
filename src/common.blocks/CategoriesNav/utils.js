@@ -45,7 +45,7 @@ function isLeftSwipe(coordinates) {
 
 function removeAnimation(category) {
   ["left", "right"].forEach((direction) =>
-    category.classList.remove(`Categories-Nav__Picture--swipe-${direction}`)
+    category.classList.remove(`Categories-Nav__Picture--swipe--${direction}`)
   );
 }
 

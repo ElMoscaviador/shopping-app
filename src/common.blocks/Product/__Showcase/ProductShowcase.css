@@ -1,0 +1,6 @@
+.Product__Showcase {
+    display: flex;
+    flex-direction: column;
+    margin-left: clamp(1rem, 5vw, 5rem);
+    width: clamp(250px, 50%, 400%);
+}

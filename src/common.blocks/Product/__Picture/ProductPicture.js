@@ -1,3 +1,5 @@
+import "./ProductPicture.css";
+
 const ProductPicture = ({ product }) => (
   <img
     aria-label={`${product.name}`}

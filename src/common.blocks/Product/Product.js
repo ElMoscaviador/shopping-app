@@ -1,3 +1,4 @@
+import "./Product.css";
 import { useEffect } from "react";
 import { useLoaderData, useOutletContext } from "react-router-dom";
 import { fetchSingleProduct } from "../../utils/database";

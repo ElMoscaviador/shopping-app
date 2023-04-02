@@ -1,5 +1,7 @@
+import "./QuantityUpdaterSign.css";
+
 const QuantityUpdaterSign = ({ sign }) => (
-  <span className="quantity-updater__sign">{sign}</span>
+  <span className="Quantity-Updater__Sign">{sign}</span>
 );
 
-export default QuantityUpdaterSign
+export default QuantityUpdaterSign;

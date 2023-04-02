@@ -1,0 +1,12 @@
+.Quantity-Updater__Input {
+    align-self: center;
+    background: linear-gradient(90deg, rgba(255, 68, 147, 0.77) 0%, rgba(255, 170, 147, 0.99) 100%);
+    background-clip: text;
+    border: none;
+    color: transparent;
+    font-family: var(--ff-regular);
+    font-size: clamp(18px, 5vw, 28px);
+    text-align: center;
+    transform: translateY(1px);
+    width: 30px;
+}

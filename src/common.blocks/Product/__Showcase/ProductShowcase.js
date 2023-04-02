@@ -1,3 +1,4 @@
+import "./ProductShowcase.css";
 import ProductData from "../__Data/ProductData";
 import ProductForm from "../__Form/ProductForm";
 

@@ -1,0 +1,6 @@
+.Gradient-Container {
+    background: linear-gradient(90deg, rgba(255, 68, 147, 0.77) 0%, rgba(255, 170, 147, 0.99) 100%);
+    background-clip: text;
+    display: grid;
+    font-family: var(--ff-bold);
+}

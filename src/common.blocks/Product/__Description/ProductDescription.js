@@ -1,3 +1,5 @@
+import "./ProductDescription.css";
+
 const ProductDescription = ({ description }) => (
   <p className="Product__Description">{description}</p>
 );

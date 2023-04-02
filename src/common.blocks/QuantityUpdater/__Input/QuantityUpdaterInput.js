@@ -1,10 +1,12 @@
+import "./QuantityUpdaterInput.css";
+
 const QuantityUpdaterInput = ({ valueState }) => {
   const { value, setValue } = valueState;
   return (
     <input
-      className="quantity-updater__input"
+      className="Quantity-Updater__Input"
       min={1}
-      name="quantity-updater__input"
+      name="quantity"
       onChange={(event) => setValue(event.target.value)}
       type="numeric"
       value={value}

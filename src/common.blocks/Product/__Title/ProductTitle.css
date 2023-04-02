@@ -1,0 +1,7 @@
+.Product__Title {
+    background: linear-gradient(90deg, rgba(209, 155, 46, 1) 0%, rgba(165, 63, 162, 0.99) 100%);
+    background-clip: text;
+    color: transparent;
+    font-family: var(--ff-extrabold);
+    font-size: clamp(16px, 5vw, 32px);
+}

@@ -1,0 +1,15 @@
+.Product {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    height: 45%;
+    max-width: 2500px;
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 1500px) {
+    .Product {
+        justify-content: center;
+    }
+}

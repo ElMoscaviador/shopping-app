@@ -1,20 +1,21 @@
-import Container from "../../GradientContainer/GradientContainer";
+import "./QuantityUpdaterButton.css";
+import GradientContainer from "../../GradientContainer/GradientContainer";
 import QuantityUpdaterSign from "../__Sign/QuantityUpdaterSign";
 
 const QuantityUpdaterButton = ({ sign, setValue }) => {
   return (
     <button
-      className="quantity-updater__button"
+      className="Quantity-Updater__Button"
       type="button"
       onClick={setValue}
     >
-      <Container
+      <GradientContainer
         additionalClasses={{
           modifiers: ["--background-gradient"],
         }}
       >
         <QuantityUpdaterSign sign={sign} />
-      </Container>
+      </GradientContainer>
     </button>
   );
 };
