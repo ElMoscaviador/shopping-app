@@ -7,7 +7,7 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import currentProductsToDisplay from "./handlers";
-import { fetchProductsInCategory } from "../../utils/database";
+import { fetchProductsInCategory } from "../../shared/utils/database";
 import NavArrows from "../NavArrows/NavArrows";
 import ProductCard from "../ProductCard/ProductCard";
 

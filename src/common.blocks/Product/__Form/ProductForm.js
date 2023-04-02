@@ -1,7 +1,7 @@
 import "./ProductForm.css";
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-import { sendProductToCart } from "../../../utils/handlers";
+import { sendProductToCart } from "../../../shared/utils/handlers";
 import QuantityUpdater from "../../QuantityUpdater/QuantityUpdater";
 import ProductCartButton from "../__CartButton/ProductCartButton";
 

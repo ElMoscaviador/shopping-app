@@ -4,8 +4,8 @@ import Home from "../Home/Home";
 import Shop from "../Shop/Shop";
 import Category from "../Category/Category";
 import Product from "../Product/Product";
- /* import Cart from "../Cart/Cart";
-import Page404 from "../Page404/Page404"; */
+import Cart from "../Cart/Cart";
+import Page404 from "../Page404/Page404";
 
 const routes = [
   {
@@ -25,7 +25,7 @@ const routes = [
             element: <Category />,
             loader: ({ params }) => params,
           },
-           {
+          {
             path: ":category/:sku",
             element: <Product />,
             loader: ({ params }) => {
@@ -34,15 +34,16 @@ const routes = [
           },
         ],
       },
-      /* {
+      {
         path: "/cart",
         element: <Cart />,
-      }, */
+      },
     ],
-  } /* {
+  },
+  {
     path: "*",
     element: <Page404 />,
-  } */,
+  },
 ];
 
 const Router = () => <RouterProvider router={createBrowserRouter(routes)} />;

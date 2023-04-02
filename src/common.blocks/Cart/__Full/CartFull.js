@@ -3,8 +3,8 @@ import { useOutletContext, useSearchParams } from "react-router-dom";
 import {
   calculatePrice,
   updateItemQuantityInCart,
-} from "../../../utils/handlers";
-import { fetchSingleProduct } from "../../../utils/database";
+} from "../../../shared/utils/handlers";
+import { fetchSingleProduct } from "../../../shared/utils/database";
 import QuantityModifierButton from "../QuantityModifier/QuantityModifierButton";
 import NavArrows from "../../NavArrows/NavArrows";
 import currentProductsToDisplay from "./handlers";

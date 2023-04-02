@@ -1,0 +1,8 @@
+.Page-404__Title {
+    font-family: var(--ff-extrabold);
+    font-size: clamp(100px, 10vw, 128px);
+    justify-self: center;
+    height: fit-content;
+    grid-row: 1;
+    grid-column: 1/3;
+}

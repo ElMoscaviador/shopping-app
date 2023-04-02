@@ -1,9 +1,11 @@
+import "./Page404Picture.css";
+
 export const Page404Picture = () => {
   return (
     <img
       alt="Missy shrinks the Sacha Dhawan Master."
-      className="page-404__picture"
-      src={require("../../assets/404/missy-master.png")}
+      className="Page-404__Picture"
+      src={require("./Page404Picture.png")}
     />
   );
 };

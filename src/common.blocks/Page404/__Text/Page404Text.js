@@ -1,5 +1,7 @@
+import "./Page404Text.css";
+
 const Page404Text = () => (
-  <p className="page-404__text">
+  <p className="Page-404__Text">
     This page <br /> has been <br /> shrunk to
     <br />
     oblivion.

@@ -1,0 +1,5 @@
+.Page-404__Text {
+    font-family: var(--ff-lightitalic);
+    font-size: clamp(27px, 5vw, 54px);
+    line-height: 1.2;
+}

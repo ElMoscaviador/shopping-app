@@ -1,7 +1,7 @@
 import "./Product.css";
 import { useEffect } from "react";
 import { useLoaderData, useOutletContext } from "react-router-dom";
-import { fetchSingleProduct } from "../../utils/database";
+import { fetchSingleProduct } from "../../shared/utils/database";
 import ProductPicture from "./__Picture/ProductPicture";
 import ProductShowcase from "./__Showcase/ProductShowcase";
 
