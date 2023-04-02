@@ -1,13 +1,12 @@
+import "./Cart.css";
 import { useOutletContext } from "react-router-dom";
-import EmptyCart from "./__Empty/CartEmpty";
-import FullCart from "./__Full/CartFull";
+import CartEmpty from "./__Empty/CartEmpty";
+import CartFull from "./__Full/CartFull";
 
 const Cart = () => {
   const [cart] = useOutletContext()["cartState"];
   return (
-    <div className="cart">
-      {!!cart.length ? <FullCart /> : <EmptyCart />}
-    </div>
+    <div className="Cart">{!!cart.length ? <CartFull /> : <CartEmpty />}</div>
   );
 };
 

@@ -1,20 +1,12 @@
 import { useEffect } from "react";
 import { useOutletContext, useSearchParams } from "react-router-dom";
-import {
-  calculatePrice,
-  updateItemQuantityInCart,
-} from "../../../shared/utils/handlers";
 import { fetchSingleProduct } from "../../../shared/utils/database";
-import QuantityModifierButton from "../QuantityModifier/QuantityModifierButton";
 import NavArrows from "../../NavArrows/NavArrows";
-import currentProductsToDisplay from "./handlers";
-import QuantityUpdater from "../../QuantityUpdater/QuantityUpdater";
-import ProductCard from "../../ProductCard/ProductCard";
 import CartElement from "../__Element/CartElement";
 
 const CartFull = () => {
   const { cartState, setCurrentCategory } = useOutletContext();
-  const [cart, setCart] = cartState;
+  const [cart] = cartState;
   const maxProductsPerPage = 3;
   const totalNumberOfPages = Math.ceil(cart.length / maxProductsPerPage);
   const [searchParams] = useSearchParams();
@@ -29,7 +21,7 @@ const CartFull = () => {
   useEffect(() => setCurrentCategory("CART"), []);
 
   return (
-    <main className="cart__full">
+    <main className="Cart__Full">
       {totalNumberOfPages > 1 && (
         <NavArrows
           currentPage={Number(searchParams.get("page") || 1)}
@@ -37,9 +29,9 @@ const CartFull = () => {
         />
       )}
       {currentProductsToDisplay().map((productInCart) => {
-        const { quantity, sku } = productInCart;
-        const currentProductInCart = fetchSingleProduct(sku);
-        return <CartElement />;
+        const { sku } = productInCart;
+        const currentProduct = fetchSingleProduct(sku);
+        return <CartElement product={currentProduct} />;
       })}
     </main>
   );

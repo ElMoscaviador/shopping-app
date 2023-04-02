@@ -1,9 +1,10 @@
+import "./CartEmpty.css";
 import CartEmptyImage from "../__EmptyImage/CartEmptyImage";
 import CartEmptyText from "../__EmptyText/CartEmptyText";
 
 const CartEmpty = () => {
   return (
-    <div className="cart__empty">
+    <div className="Cart__Empty">
       <CartEmptyImage />
       <CartEmptyText />
     </div>

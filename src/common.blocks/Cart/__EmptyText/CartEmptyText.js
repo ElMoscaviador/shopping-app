@@ -1,5 +1,7 @@
+import './Cart-Empty-Text.css'
+
 const CartEmptyText = () => (
-  <p className="cart__empty-text">YOUR CART IS EMPTY.</p>
+  <p className="Cart__Empty-Text">YOUR CART IS EMPTY.</p>
 );
 
 export default CartEmptyText;

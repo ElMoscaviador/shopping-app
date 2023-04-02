@@ -1,8 +1,10 @@
+import "./CartEmptyImage.css";
+
 const CartEmptyImage = () => (
   <img
     alt="The Empty Child"
-    className="cart__empty-image"
-    src={require("../../assets/cart/empty.png")}
+    className="<Cart__Empty-Image"
+    src={require("./CartEmptyImage.png")}
   />
 );
 
