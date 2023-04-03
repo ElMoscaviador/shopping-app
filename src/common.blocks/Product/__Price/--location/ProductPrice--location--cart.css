@@ -1,4 +1,5 @@
 .Product__Price--location--cart {
     color: #ffd893ff;
-    font-size: clamp(14px, 4vw, 26px);
+    font-size: var(--fs-md);
+
 }

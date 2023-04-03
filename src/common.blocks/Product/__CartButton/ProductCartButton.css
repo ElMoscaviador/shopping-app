@@ -6,11 +6,11 @@
     cursor: pointer;
     font-size: clamp(12px, 1.5vw, 18px);
     height: 100%;
-    margin-right: 0.5rem;
-    padding: 0.5rem;
+    margin-right: var(--space-3xs);
+    padding: var(--space-3xs);
 }
 
-.Product__Cart-Button .Gradient-Container{
+.Product__Cart-Button .Gradient-Container {
     height: 100%;
     width: clamp(90px, 15vw, 150px);
 }

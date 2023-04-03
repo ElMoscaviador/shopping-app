@@ -1,6 +1,6 @@
 .Home__Hero {
     animation: materialize 3s linear infinite both;
-    margin-right: var(--m);
+    margin-right: var(--space-l);
     opacity: 1;
     transform: translateY(-5%);
     width: clamp(200px, 30%, 400px);

@@ -1,8 +1,8 @@
-.Product-Card_Picture--sku--sonic-13,
-.Product-Card_Picture--sku--sonic-10,
-.Product-Card_Picture--sku--figure-dalek,
-.Product-Card_Picture--sku--figure-sontaran,
-.Product-Card_Picture--sku--figure-weeping_angel,
-.Product-Card_Picture--sku--figure-zygon {
-    padding-top: 0.5rem;
+.Product-Card__Picture--sku--sonic-13,
+.Product-Card__Picture--sku--sonic-10,
+.Product-Card__Picture--sku--figure-dalek,
+.Product-Card__Picture--sku--figure-sontaran,
+.Product-Card__Picture--sku--figure-weeping_angel,
+.Product-Card__Picture--sku--figure-zygon {
+    padding-top: var(--space-2xs);
 }

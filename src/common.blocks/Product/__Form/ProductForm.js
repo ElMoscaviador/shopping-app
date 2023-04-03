@@ -21,7 +21,7 @@ const ProductForm = ({ sku }) => {
         quantitySetters={{
           add: () => setQuantity((prev) => prev + 1),
           decrease: () => setQuantity((prev) => (prev === 1 ? 1 : prev - 1)),
-          manual: setQuantity,
+          manual: (event) => setQuantity(event.target.value),
         }}
       />
       <ProductCartButton />

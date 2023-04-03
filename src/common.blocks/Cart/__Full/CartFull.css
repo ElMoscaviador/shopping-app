@@ -1,7 +1,7 @@
 .Cart__Full {
     align-items: center;
     display: grid;
-    gap: 2rem;
+    gap: var(--space-m);
     height: 60%;
     justify-content: center;
     width: 100%;

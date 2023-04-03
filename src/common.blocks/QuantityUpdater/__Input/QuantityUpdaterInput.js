@@ -6,7 +6,7 @@ const QuantityUpdaterInput = ({ quantity, setValue }) => {
       className="Quantity-Updater__Input"
       min={1}
       name="quantity"
-      onChange={(event) => setValue(event.target.value)}
+      onChange={setValue}
       type="numeric"
       value={quantity}
     />
