@@ -1,7 +1,7 @@
 import "./BackgroundLayer.css";
-import './--main/BackgroundLayer--main.css';
-import './--style/BackgroundLayer--style.css';
-import { addBEMClasses } from "../../../shared/utils/handlers";
+import "./--main/BackgroundLayer--main.css";
+import "./--style/BackgroundLayer--style.css";
+import { addBEMClasses } from "../../../common.shared/utils/handlers";
 
 const BackgroundLayer = ({ additionalClasses }) => (
   <div

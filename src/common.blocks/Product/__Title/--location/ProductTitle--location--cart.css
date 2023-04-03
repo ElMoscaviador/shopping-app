@@ -1,0 +1,5 @@
+.Product__Title--location--cart {
+    color: #ffd893ff;
+    font-family: BBCReithSans-Light;
+    font-size: clamp(14px, 4vw, 26px);
+}

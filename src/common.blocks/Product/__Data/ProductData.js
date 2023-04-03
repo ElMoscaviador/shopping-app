@@ -4,8 +4,14 @@ import ProductDescription from "../__Description/ProductDescription";
 
 const ProductData = ({ product }) => (
   <div className="Product__Data">
-    <ProductTitle title={product.name.full} />
-    <ProductPrice price={product.price} />
+    <ProductTitle
+      title={product.name.full}
+      additionalClasses={{ modifiers: ["--location--shop"] }}
+    />
+    <ProductPrice
+      price={product.price}
+      additionalClasses={{ modifiers: ["--location--shop"] }}
+    />
     <ProductDescription description={product.description} />
   </div>
 );

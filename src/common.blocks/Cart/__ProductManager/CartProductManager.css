@@ -1,0 +1,5 @@
+.Cart__Product-Manager {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

@@ -1,16 +1,21 @@
 import "./CartElement.css";
 import ProductCard from "../../ProductCard/ProductCard";
-import ProductTitle from "../../Product/__Title/ProductTitle";
-import ProductPrice from "../../Product/__Price/ProductPrice";
-import QuantityUpdater from "../../QuantityUpdater/QuantityUpdater";
+import CartProductManager from "../__ProductManager/CartProductManager";
 
-const CartElement = ({ product }) => (
-  <div className="Cart__Element">
-    <ProductCard product={product} />
-    <ProductTitle title={product.title} />
-    <ProductPrice price={product.price} />
-    <QuantityUpdater />
-  </div>
-);
+const CartElement = ({ quantity, product, setCart }) => {
+  return (
+    <div className="Cart__Element">
+      <ProductCard
+        product={product}
+        additionalClasses={{ modifiers: ["--location--cart"] }}
+      />
+      <CartProductManager
+        quantity={quantity}
+        product={product}
+        setCart={setCart}
+      />
+    </div>
+  );
+};
 
 export default CartElement;

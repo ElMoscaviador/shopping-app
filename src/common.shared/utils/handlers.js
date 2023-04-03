@@ -6,6 +6,7 @@ function addBEMClasses(classes, namespace) {
   const blocks =
     classes?.blocks?.filter((b) => b).map((block) => `${block}${namespace}`) ||
     [];
+    console.log(modifiers)
 
   return [...modifiers, ...blocks].join(" ") || [];
 }
@@ -13,6 +14,12 @@ function addBEMClasses(classes, namespace) {
 function calculatePrice(price, quantity) {
   return Math.round(price * quantity * 100) / 100;
 }
+
+const curry =
+  (originalFunction) =>
+  (...originalArgs) =>
+  (...remainingArgs) =>
+    originalFunction(...originalArgs, ...remainingArgs);
 
 function fetchQuantity(form) {
   return Number(new FormData(form).get("quantity"));
@@ -55,7 +62,8 @@ function updateProductInCart(cart, productIsInCart, quantity, isCart) {
   });
 }
 
-function updateProductQuantityInCart(quantity, sku, setCart) {
+function updateProductQuantityInCart(sku, setCart, quantity) {
+  console.log(sku, setCart, quantity);
   setCart((previousCart) => {
     if (quantity === 0) {
       const cartWithoutMatchingProduct = returnCartCopyWithoutProduct(
@@ -79,6 +87,7 @@ function updateProductQuantityInCart(quantity, sku, setCart) {
 export {
   addBEMClasses,
   calculatePrice,
+  curry,
   productInCart,
   returnCartCopyWithoutProduct,
   sendProductToCart,

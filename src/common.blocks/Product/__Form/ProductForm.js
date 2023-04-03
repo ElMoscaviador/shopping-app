@@ -1,13 +1,13 @@
 import "./ProductForm.css";
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-import { sendProductToCart } from "../../../shared/utils/handlers";
+import { sendProductToCart } from "../../../common.shared/utils/handlers";
 import QuantityUpdater from "../../QuantityUpdater/QuantityUpdater";
 import ProductCartButton from "../__CartButton/ProductCartButton";
 
 const ProductForm = ({ sku }) => {
   const [cart, setCart] = useOutletContext().cartState;
-  const [value, setValue] = useState(1);
+  const [quantity, setQuantity] = useState(1);
   return (
     <form
       className="Product__Form"
@@ -16,7 +16,14 @@ const ProductForm = ({ sku }) => {
         sendProductToCart(event, sku, { cart, setCart });
       }}
     >
-      <QuantityUpdater valueState={{ value, setValue }} />
+      <QuantityUpdater
+        quantity={quantity}
+        quantitySetters={{
+          add: () => setQuantity((prev) => prev + 1),
+          decrease: () => setQuantity((prev) => (prev === 1 ? 1 : prev - 1)),
+          manual: setQuantity,
+        }}
+      />
       <ProductCartButton />
     </form>
   );

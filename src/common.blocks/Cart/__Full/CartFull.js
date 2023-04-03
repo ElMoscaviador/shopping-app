@@ -1,3 +1,4 @@
+import "./CartFull.css";
 import { useEffect } from "react";
 import { useOutletContext, useSearchParams } from "react-router-dom";
 import { fetchSingleProduct } from "../../../shared/utils/database";
@@ -6,10 +7,10 @@ import CartElement from "../__Element/CartElement";
 
 const CartFull = () => {
   const { cartState, setCurrentCategory } = useOutletContext();
-  const [cart] = cartState;
+  const [cart, setCart] = cartState;
   const maxProductsPerPage = 3;
-  const totalNumberOfPages = Math.ceil(cart.length / maxProductsPerPage);
   const [searchParams] = useSearchParams();
+  const totalNumberOfPages = Math.ceil(cart.length / maxProductsPerPage);
 
   function currentProductsToDisplay() {
     const currentPage = Number(searchParams.get("page") || 1);
@@ -28,11 +29,14 @@ const CartFull = () => {
           totalNumberOfPages={totalNumberOfPages}
         />
       )}
-      {currentProductsToDisplay().map((productInCart) => {
-        const { sku } = productInCart;
-        const currentProduct = fetchSingleProduct(sku);
-        return <CartElement product={currentProduct} />;
-      })}
+      {currentProductsToDisplay().map((productInCart) => (
+        <CartElement
+          key={productInCart.sku}
+          quantity={productInCart.quantity}
+          product={fetchSingleProduct(productInCart.sku)}
+          setCart={setCart}
+        />
+      ))}
     </main>
   );
 };

@@ -1,4 +1,4 @@
-.Product__Title {
+.Product__Title--location--shop {
     background: linear-gradient(90deg, rgba(209, 155, 46, 1) 0%, rgba(165, 63, 162, 0.99) 100%);
     background-clip: text;
     color: transparent;

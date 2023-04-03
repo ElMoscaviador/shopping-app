@@ -9,11 +9,7 @@ const QuantityUpdaterButton = ({ sign, setValue }) => {
       type="button"
       onClick={setValue}
     >
-      <GradientContainer
-        additionalClasses={{
-          modifiers: ["--background-gradient"],
-        }}
-      >
+      <GradientContainer>
         <QuantityUpdaterSign sign={sign} />
       </GradientContainer>
     </button>

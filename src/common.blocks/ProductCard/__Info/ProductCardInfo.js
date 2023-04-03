@@ -9,9 +9,8 @@ const ProductCardInfo = ({ product, transparent }) => (
       transparent ? `Product-Card__Info--transparent` : ""
     }`}
   >
-    {[ProductCardName, ProductCardPrice].map((Component) => (
-      <Component product={product} />
-    ))}
+    <ProductCardName product={product} />
+    <ProductCardPrice product={product} />
   </div>
 );
 

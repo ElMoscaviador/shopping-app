@@ -1,7 +1,6 @@
 import "./QuantityUpdaterInput.css";
 
-const QuantityUpdaterInput = ({ valueState }) => {
-  const { value, setValue } = valueState;
+const QuantityUpdaterInput = ({ quantity, setValue }) => {
   return (
     <input
       className="Quantity-Updater__Input"
@@ -9,9 +8,16 @@ const QuantityUpdaterInput = ({ valueState }) => {
       name="quantity"
       onChange={(event) => setValue(event.target.value)}
       type="numeric"
-      value={value}
+      value={quantity}
     />
   );
 };
 
 export default QuantityUpdaterInput;
+
+/* 
+
+
+
+
+*/

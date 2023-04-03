@@ -1,12 +1,21 @@
 import "./ProductCard.css";
+import "./--location/ProductCard--location--cart.css";
 import { NavLink } from "react-router-dom";
 import ProductCardPanel from "./__Panel/ProductCardPanel";
 import ProductCardPicture from "./__Picture/ProductCardPicture";
 import ProductCardInfo from "./__Info/ProductCardInfo";
+import { addBEMClasses } from "../../common.shared/utils/handlers";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, additionalClasses }) => {
   return (
-    <NavLink className="Product-Card" to={`${product.sku}`}>
+    <NavLink
+      className={`Product-Card ${
+        additionalClasses
+          ? addBEMClasses(additionalClasses, "Product-Card")
+          : ""
+      }`}
+      to={`${product.sku}`}
+    >
       <ProductCardPanel position="front" />
       <ProductCardPicture product={product} />
       <ProductCardInfo product={product} />
