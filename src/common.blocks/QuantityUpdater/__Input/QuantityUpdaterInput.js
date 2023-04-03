@@ -14,10 +14,3 @@ const QuantityUpdaterInput = ({ quantity, setValue }) => {
 };
 
 export default QuantityUpdaterInput;
-
-/* 
-
-
-
-
-*/

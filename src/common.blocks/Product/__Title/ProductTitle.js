@@ -1,6 +1,6 @@
-import { addBEMClasses } from "../../../common.shared/utils/handlers";
 import "./--location/ProductTitle--location--cart.css";
 import "./--location/ProductTitle--location--shop.css";
+import { addBEMClasses } from "../../../common.shared/utils";
 
 const ProductTitle = ({ title, additionalClasses }) => (
   <h1

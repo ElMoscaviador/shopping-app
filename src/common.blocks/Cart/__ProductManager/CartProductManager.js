@@ -2,10 +2,8 @@ import "./CartProductManager.css";
 import ProductTitle from "../../Product/__Title/ProductTitle";
 import ProductPrice from "../../Product/__Price/ProductPrice";
 import QuantityUpdater from "../../QuantityUpdater/QuantityUpdater";
-import {
-  curry,
-  updateProductQuantityInCart,
-} from "../../../common.shared/utils/handlers";
+import { curry } from "../../../common.shared/utils";
+import { calculatePrice, updateProductQuantityInCart } from "./handlers";
 
 const CartProductManager = ({ quantity, product, setCart }) => {
   const updateQuantity = curry(updateProductQuantityInCart)(
@@ -20,7 +18,7 @@ const CartProductManager = ({ quantity, product, setCart }) => {
       />
       <ProductPrice
         additionalClasses={{ modifiers: ["--location--cart"] }}
-        price={product.price}
+        price={calculatePrice(product.price, quantity)}
       />
       <QuantityUpdater
         quantity={quantity}

@@ -1,10 +1,10 @@
 import "./ProductCard.css";
 import "./--location/ProductCard--location--cart.css";
+import { addBEMClasses } from "../../common.shared/utils";
 import { NavLink } from "react-router-dom";
 import ProductCardPanel from "./__Panel/ProductCardPanel";
 import ProductCardPicture from "./__Picture/ProductCardPicture";
 import ProductCardInfo from "./__Info/ProductCardInfo";
-import { addBEMClasses } from "../../common.shared/utils/handlers";
 
 const ProductCard = ({ product, additionalClasses }) => {
   return (

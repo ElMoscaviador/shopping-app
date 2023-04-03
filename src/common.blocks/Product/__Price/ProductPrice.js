@@ -1,7 +1,7 @@
 import "./ProductPrice.css";
 import "./--location/ProductPrice--location--shop.css";
 import "./--location/ProductPrice--location--cart.css";
-import { addBEMClasses } from "../../../common.shared/utils/handlers";
+import { addBEMClasses } from "../../../common.shared/utils";
 
 const ProductPrice = ({ additionalClasses, price }) => (
   <p
