@@ -30,6 +30,7 @@ const CategoriesNavLink = ({ category, categoriesState, children }) => {
 
   return (
     <NavLink
+      aria-label={`Open the ${category.name} category`}
       className="Categories-Nav__Link"
       to={`/shop/${category.name}/?page=1`}
       {...getPointerEvents()}

@@ -3,9 +3,9 @@ import HomeHero from "./__Hero/HomeHero";
 
 const Home = () => {
   return (
-    <main className="Home">
+    <div aria-label="Home page" className="Home">
       <HomeHero />
-    </main>
+    </div>
   );
 };
 

@@ -10,6 +10,9 @@ const ProductForm = ({ sku }) => {
   const [quantity, setQuantity] = useState(1);
   return (
     <form
+    aria-label="Manually update product quantity"
+
+      id="quantity"
       className="Product__Form"
       onSubmit={(event) => {
         event.preventDefault();

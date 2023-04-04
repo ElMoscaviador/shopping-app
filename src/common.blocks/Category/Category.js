@@ -30,7 +30,7 @@ const Category = () => {
   }, [category, setCurrentCategory, setCategoryIsVisited]);
 
   return (
-    <main className={`Category Category--name--${category}`}>
+    <main aria-label={`${category} page`} className={`Category Category--name--${category}`}>
       {currentProductsToDisplay(
         categoryProducts,
         currentPage,

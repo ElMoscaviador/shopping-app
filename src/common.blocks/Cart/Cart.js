@@ -6,7 +6,9 @@ import CartFull from "./__Full/CartFull";
 const Cart = () => {
   const [cart] = useOutletContext()["cartState"];
   return (
-    <div className="Cart">{!!cart.length ? <CartFull /> : <CartEmpty />}</div>
+    <div aria-label="Cart page" className="Cart">
+      {!!cart.length ? <CartFull /> : <CartEmpty />}
+    </div>
   );
 };
 

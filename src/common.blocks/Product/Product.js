@@ -5,7 +5,7 @@ import { fetchSingleProduct } from "../../common.shared/database";
 import ProductPicture from "./__Picture/ProductPicture";
 import ProductShowcase from "./__Showcase/ProductShowcase";
 
-const ShopProduct = () => {
+const Product = () => {
   const { category, sku } = useLoaderData();
   const { categoryVisitedState, setCurrentCategory } = useOutletContext();
   const [, setCategoryIsVisited] = categoryVisitedState;
@@ -18,11 +18,11 @@ const ShopProduct = () => {
   }, [setCategoryIsVisited, setCurrentCategory, category]);
 
   return (
-    <main className="Product">
+    <main aria-label={`Product: ${product.name.short}`} className="Product">
       <ProductShowcase product={product} />
       <ProductPicture product={product} />
     </main>
   );
 };
 
-export default ShopProduct;
+export default Product;

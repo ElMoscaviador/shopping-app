@@ -7,7 +7,7 @@ const Shop = () => {
   const [categoryIsVisited] = useOutletContext().categoryVisitedState;
 
   return (
-    <div className="Shop">
+    <div aria-label="Shop page" className="Shop">
       {!categoryIsVisited && <CategoriesNav />}
       <Outlet context={useOutletContext()} />
     </div>

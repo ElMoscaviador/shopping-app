@@ -1,11 +1,11 @@
 import "./Page404Text.css";
 
 const Page404Text = () => (
-  <p className="Page-404__Text">
+  <h1 className="Page-404__Text">
     This page <br /> has been <br /> shrunk to
     <br />
     oblivion.
-  </p>
+  </h1>
 );
 
 export default Page404Text;

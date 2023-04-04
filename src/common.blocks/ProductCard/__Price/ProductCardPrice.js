@@ -1,7 +1,7 @@
 import "./ProductCardPrice.css";
 
 const ProductCardPrice = ({ product }) => (
-  <span className="Product-Card__Price">£{product.price}</span>
+  <h2 className="Product-Card__Price">£{product.price}</h2>
 );
 
 export default ProductCardPrice;

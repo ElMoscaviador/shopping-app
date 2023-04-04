@@ -5,6 +5,7 @@ import ProductCardPrice from "../__Price/ProductCardPrice";
 
 const ProductCardInfo = ({ product, transparent }) => (
   <div
+    aria-hidden={transparent}
     className={`Product-Card__Info ${
       transparent ? `Product-Card__Info--transparent` : ""
     }`}

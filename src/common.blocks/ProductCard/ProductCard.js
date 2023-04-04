@@ -9,6 +9,7 @@ import ProductCardInfo from "./__Info/ProductCardInfo";
 const ProductCard = ({ product, additionalClasses }) => {
   return (
     <NavLink
+      aria-label={`Open product page: ${product.name.short}`}
       className={`Product-Card ${
         additionalClasses
           ? addBEMClasses(additionalClasses, "Product-Card")

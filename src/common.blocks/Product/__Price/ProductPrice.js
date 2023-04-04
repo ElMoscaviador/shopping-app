@@ -4,7 +4,7 @@ import "./--location/ProductPrice--location--cart.css";
 import { addBEMClasses } from "../../../common.shared/utils";
 
 const ProductPrice = ({ additionalClasses, price }) => (
-  <p
+  <h2
     className={`Product__Price ${
       additionalClasses
         ? addBEMClasses(additionalClasses, "Product__Price")
@@ -12,7 +12,7 @@ const ProductPrice = ({ additionalClasses, price }) => (
     }`}
   >
     £{price}
-  </p>
+  </h2>
 );
 
 export default ProductPrice;
