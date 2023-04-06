@@ -79,6 +79,7 @@ describe("The product cards redirect to the right products", () => {
       });
     });
   });
+
   describe("Figures", () => {
     ["Dalek", "Sontaran", "Zygon", "Weeping Angel"].forEach((product) => {
       test(`To ${product}`, async () => {
@@ -112,6 +113,7 @@ describe("The product cards redirect to the right products", () => {
       });
     });
   });
+
   describe("Sonics", () => {
     ["10th", "11th", "13th"].forEach((product) => {
       test(`To ${product}`, async () => {
@@ -144,5 +146,182 @@ describe("The product cards redirect to the right products", () => {
         expect(productPage).toBeInTheDocument();
       });
     });
+  });
+});
+
+describe("Entering an incorrect URL redirects to the 404 page.", () => {
+  render(
+    <RouterProvider
+      router={createMemoryRouter(routes, {
+        initialEntries: ["/incorrectURL"],
+      })}
+    />
+  );
+  const page404 = screen.queryByRole("main", { name: /404/i });
+  expect(page404).toBeInTheDocument();
+});
+
+test("Adding a product adds it to the cart.", async () => {
+  const user = userEvent.setup();
+  jest.mock("react-router-dom", () => ({
+    ...jest.requireActual("react-router-dom"),
+    useLoaderData: { category: "sonics", sku: "sonic-13" },
+    useOutletContext: () => ({
+      categoryVisitedState: ["", mockSetCategoryIsVisited],
+      setCurrentCategory: mockSetCurrentCategory,
+    }),
+  }));
+  render(
+    <RouterProvider
+      router={createMemoryRouter(routes, {
+        initialEntries: ["/shop", "/shop/sonics", "/shop/sonics/sonic-13"],
+      })}
+    />
+  );
+  const addToCart = await screen.findByRole("button", { name: /cart/i });
+  const toCart = await screen.findByRole("link", { name: /cart/i });
+  await act(() => user.click(addToCart));
+  await act(() => user.click(toCart));
+  const productInCart = await screen.findByRole("generic", {
+    name: /Cart product: 13th Sonic/i,
+  });
+  expect(productInCart).toBeInTheDocument();
+});
+
+describe("Updating the product quantity in the cart works", () => {
+  test("Incrementing", async () => {
+    const user = userEvent.setup();
+    jest.mock("react-router-dom", () => ({
+      ...jest.requireActual("react-router-dom"),
+      useLoaderData: { category: "sonics", sku: "sonic-13" },
+      useOutletContext: () => ({
+        categoryVisitedState: ["", mockSetCategoryIsVisited],
+        setCurrentCategory: mockSetCurrentCategory,
+      }),
+    }));
+    render(
+      <RouterProvider
+        router={createMemoryRouter(routes, {
+          initialEntries: ["/shop", "/shop/sonics", "/shop/sonics/sonic-13"],
+        })}
+      />
+    );
+    const addToCart = await screen.findByRole("button", { name: /cart/i });
+    const toCart = await screen.findByRole("link", { name: /cart/i });
+    await act(() => user.click(addToCart));
+    await act(() => user.click(toCart));
+    const incrementer = await screen.findByRole("button", {
+      name: /increase/i,
+    });
+    const input = await screen.findByTestId("quantity-input");
+    await act(() => user.click(incrementer));
+    expect(input).toHaveValue("2");
+  });
+
+  test("Decrementing", async () => {
+    const user = userEvent.setup();
+    jest.mock("react-router-dom", () => ({
+      ...jest.requireActual("react-router-dom"),
+      useLoaderData: { category: "sonics", sku: "sonic-13" },
+      useOutletContext: () => ({
+        categoryVisitedState: ["", mockSetCategoryIsVisited],
+        setCurrentCategory: mockSetCurrentCategory,
+      }),
+    }));
+    render(
+      <RouterProvider
+        router={createMemoryRouter(routes, {
+          initialEntries: ["/shop", "/shop/sonics", "/shop/sonics/sonic-13"],
+        })}
+      />
+    );
+    const addToCart = await screen.findByRole("button", { name: /cart/i });
+    const toCart = await screen.findByRole("link", { name: /cart/i });
+    await act(() => user.click(addToCart));
+    await act(() => user.click(toCart));
+    const decrementer = await screen.findByRole("button", {
+      name: /decrease/i,
+    });
+    const input = await screen.findByTestId("quantity-input");
+    await act(() => user.click(decrementer));
+    expect(input).not.toBeInTheDocument();
+  });
+
+  test("Manually adjusting", async () => {
+    const user = userEvent.setup();
+    jest.mock("react-router-dom", () => ({
+      ...jest.requireActual("react-router-dom"),
+      useLoaderData: { category: "sonics", sku: "sonic-13" },
+      useOutletContext: () => ({
+        categoryVisitedState: ["", mockSetCategoryIsVisited],
+        setCurrentCategory: mockSetCurrentCategory,
+      }),
+    }));
+    render(
+      <RouterProvider
+        router={createMemoryRouter(routes, {
+          initialEntries: ["/shop", "/shop/sonics", "/shop/sonics/sonic-13"],
+        })}
+      />
+    );
+    const addToCart = await screen.findByRole("button", { name: /cart/i });
+    const toCart = await screen.findByRole("link", { name: /cart/i });
+    await act(() => user.click(addToCart));
+    await act(() => user.click(toCart));
+    const input = await screen.findByTestId("quantity-input");
+    await act(() => user.click(input));
+    await act(() => user.keyboard("4"));
+    expect(input).toHaveValue("14");
+  });
+});
+
+describe("The navbar counter works correctly.", () => {
+  test("Adding one item sets up the counter.", async () => {
+    const user = userEvent.setup();
+    jest.mock("react-router-dom", () => ({
+      ...jest.requireActual("react-router-dom"),
+      useLoaderData: { category: "sonics", sku: "sonic-13" },
+      useOutletContext: () => ({
+        categoryVisitedState: ["", mockSetCategoryIsVisited],
+        setCurrentCategory: mockSetCurrentCategory,
+      }),
+    }));
+    render(
+      <RouterProvider
+        router={createMemoryRouter(routes, {
+          initialEntries: ["/shop", "/shop/sonics", "/shop/sonics/sonic-13"],
+        })}
+      />
+    );
+    const addToCart = await screen.findByRole("button", { name: /cart/i });
+    await act(() => user.click(addToCart));
+    const counter = await screen.findByDisplayValue("1");
+    expect(counter).toHaveValue("1");
+  });
+  test("Adding several identical items does not increase the counter.", async () => {
+    const user = userEvent.setup();
+    jest.mock("react-router-dom", () => ({
+      ...jest.requireActual("react-router-dom"),
+      useLoaderData: { category: "sonics", sku: "sonic-13" },
+      useOutletContext: () => ({
+        categoryVisitedState: ["", mockSetCategoryIsVisited],
+        setCurrentCategory: mockSetCurrentCategory,
+      }),
+    }));
+    render(
+      <RouterProvider
+        router={createMemoryRouter(routes, {
+          initialEntries: ["/shop", "/shop/sonics", "/shop/sonics/sonic-13"],
+        })}
+      />
+    );
+    const addToCart = await screen.findByRole("button", { name: /cart/i });
+    await act(() => user.click(addToCart));
+    await act(() => user.click(addToCart));
+    const counter = await screen.findByRole("generic", {
+      name: /products in cart/,
+    });
+    expect(counter).not.toHaveTextContent("2");
+    expect(counter).toHaveTextContent("1");
   });
 });

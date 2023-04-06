@@ -6,7 +6,7 @@ import ProductCardPanel from "./__Panel/ProductCardPanel";
 import ProductCardPicture from "./__Picture/ProductCardPicture";
 import ProductCardInfo from "./__Info/ProductCardInfo";
 
-const ProductCard = ({ product, additionalClasses }) => {
+const ProductCard = ({ product, additionalClasses, withInfo }) => {
   return (
     <NavLink
       aria-label={`Open product page: ${product.name.short}`}
@@ -19,8 +19,12 @@ const ProductCard = ({ product, additionalClasses }) => {
     >
       <ProductCardPanel position="front" />
       <ProductCardPicture product={product} />
-      <ProductCardInfo product={product} />
-      <ProductCardInfo product={product} transparent />
+      {withInfo && (
+        <>
+          <ProductCardInfo product={product} />
+          <ProductCardInfo product={product} transparent />
+        </>
+      )}
       <ProductCardPanel position="back" />
     </NavLink>
   );

@@ -30,13 +30,16 @@ const Category = () => {
   }, [category, setCurrentCategory, setCategoryIsVisited]);
 
   return (
-    <main aria-label={`${category} page`} className={`Category Category--name--${category}`}>
+    <main
+      aria-label={`${category} page`}
+      className={`Category Category--name--${category}`}
+    >
       {currentProductsToDisplay(
         categoryProducts,
         currentPage,
         maxProductsPerPage
       ).map((product) => (
-        <ProductCard key={product.sku} product={product} />
+        <ProductCard key={product.sku} product={product} withInfo />
       ))}
       {totalNumberOfPages > 1 && (
         <NavArrows

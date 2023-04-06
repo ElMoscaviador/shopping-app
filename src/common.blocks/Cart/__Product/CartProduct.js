@@ -1,10 +1,13 @@
-import "./CartElement.css";
+import "./CartProduct.css";
 import ProductCard from "../../ProductCard/ProductCard";
 import CartProductManager from "../__ProductManager/CartProductManager";
 
-const CartElement = ({ quantity, product, setCart }) => {
+const CartProduct = ({ quantity, product, setCart }) => {
   return (
-    <div className="Cart__Element">
+    <div
+      aria-label={`Cart product: ${product.name.short}`}
+      className="Cart__Product"
+    >
       <ProductCard
         product={product}
         additionalClasses={{ modifiers: ["--location--cart"] }}
@@ -18,4 +21,4 @@ const CartElement = ({ quantity, product, setCart }) => {
   );
 };
 
-export default CartElement;
+export default CartProduct;

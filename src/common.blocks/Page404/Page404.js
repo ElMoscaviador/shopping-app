@@ -8,7 +8,7 @@ const Page404 = () => {
   return (
     <>
       <Background />
-      <main className="Page-404">
+      <main aria-label="404" className="Page-404">
         <Page404Title />
         <Page404TextAndButton />
         <Page404Picture />

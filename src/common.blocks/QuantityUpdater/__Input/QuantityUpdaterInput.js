@@ -8,7 +8,9 @@ const QuantityUpdaterInput = ({ quantity, setValue }) => {
       min={1}
       name="quantity"
       onChange={setValue}
+      data-testid="quantity-input"
       type="numeric"
+      pattern={'[0-9]+'}
       value={quantity}
     />
   );

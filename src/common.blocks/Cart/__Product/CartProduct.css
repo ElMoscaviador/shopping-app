@@ -1,4 +1,4 @@
-.Cart__Element {
+.Cart__Product {
     display: flex;
     gap: var(--space-xs);
 }

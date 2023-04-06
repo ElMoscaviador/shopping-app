@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useOutletContext, useSearchParams } from "react-router-dom";
 import currentProductsToDisplay from "./handlers";
 import { fetchSingleProduct } from "../../../common.shared/database";
-import CartElement from "../__Element/CartElement";
+import CartProduct from "../__Product/CartProduct";
 import NavArrows from "../../NavArrows/NavArrows";
 
 const CartFull = () => {
@@ -13,7 +13,6 @@ const CartFull = () => {
   const [searchParams] = useSearchParams();
   const currentPage = Number(searchParams.get("page") || 1);
   const totalNumberOfPages = Math.ceil(cart.length / maxProductsPerPage);
-
   useEffect(() => setCurrentCategory("CART"), []);
 
   return (
@@ -25,14 +24,15 @@ const CartFull = () => {
         />
       )}
       {currentProductsToDisplay(cart, currentPage, maxProductsPerPage).map(
-        (productInCart) => (
-          <CartElement
+        (productInCart) => {
+          return (
+          <CartProduct
             key={productInCart.sku}
             quantity={productInCart.quantity}
             product={fetchSingleProduct(productInCart.sku)}
             setCart={setCart}
           />
-        )
+        )}
       )}
     </main>
   );
