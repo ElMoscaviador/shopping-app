@@ -1,0 +1,3 @@
+.Product__Cart-Button--accessibility:hover {
+    outline: var(--accessibility-outline);
+}

@@ -1,0 +1,3 @@
+.Categories-Nav--accessible:hover {
+    outline: var(--accessibility-outline);
+}

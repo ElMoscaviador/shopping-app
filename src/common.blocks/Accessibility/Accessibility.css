@@ -1,0 +1,12 @@
+.Accessibility {
+    position: absolute;
+    margin: var(--space-2xs) var(--space-2xs);
+    height: 24px;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+body.accessibility-mode .Product-Card__Picture{
+    border: 1px solid green;
+}

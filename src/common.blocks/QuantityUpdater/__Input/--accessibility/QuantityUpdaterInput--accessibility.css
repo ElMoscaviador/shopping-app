@@ -1,0 +1,3 @@
+.Quantity-Updater__Input--accessibility:hover {
+    outline: var(--accessibility-outline);
+}

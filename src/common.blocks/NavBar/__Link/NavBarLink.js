@@ -7,7 +7,7 @@ const NavBarLink = ({ section, resetCategoryState }) => {
       aria-label={`Open the ${section === "/" ? "home" : section} section`}
       className="Nav-Bar__Link"
       to={section}
-      onClick={() => resetCategoryState}
+      onClick={resetCategoryState}
     >
       <NavBarIcon section={section} />
     </NavLink>

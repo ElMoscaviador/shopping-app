@@ -1,6 +1,6 @@
 .Product-Card__Name {
     font-family: var(--ff-regular);
-    font-size: var(--fs-s);
+    font-size: clamp(14px, 2vw, 20px);
     max-width: 10ch;
     overflow: hidden;
     text-overflow: ellipsis;

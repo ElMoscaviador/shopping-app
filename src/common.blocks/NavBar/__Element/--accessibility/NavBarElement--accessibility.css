@@ -1,0 +1,3 @@
+.Nav-Bar__Element--accessibility:hover {
+    outline: var(--accessibility-outline);
+}

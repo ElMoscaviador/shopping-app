@@ -1,0 +1,8 @@
+.Footer {
+    bottom: 0;
+    display: flex;
+    opacity: 0;
+    z-index: 0;
+    background-color: transparent;
+    position: fixed;
+}

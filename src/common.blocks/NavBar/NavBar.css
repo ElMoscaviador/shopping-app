@@ -4,7 +4,7 @@
     background-size: 100%;
     bottom: 0;
     height: calc(var(--width)/ 4.07);
-    margin-bottom: var(--m);
+    margin-bottom: var(--space-l);
     position: absolute;
     width: var(--width);
     z-index: 3;

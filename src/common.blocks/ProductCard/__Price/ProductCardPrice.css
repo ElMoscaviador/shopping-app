@@ -1,6 +1,6 @@
 .Product-Card__Price {
     font-family: var(--ff-bold);
-    font-size: var(--fs-s);
+    font-size: clamp(14px, 2vw, 20px);
     max-width: 4ch;
     z-index: 2;
 }

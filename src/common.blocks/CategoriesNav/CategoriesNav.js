@@ -1,3 +1,4 @@
+import './CategoriesNav.css'
 import CategoriesNavList from "./__List/CategoriesNavList";
 
 const CategoriesNav = () => (
