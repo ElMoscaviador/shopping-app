@@ -1,11 +1,13 @@
 # 🇬🇧 THE 'BLUE BOX SHOP' SHOPPING APP 🇬🇧
-#### A barebones shopping app dedicated to BBC's DOCTOR WHO
+#### A barebones shopping app dedicated to **BBC's DOCTOR WHO**
 https://github.com/ElMoscaviador/shopping-cart
 
 ---
 ## ALL ABOUT THE PROJECT
 
 Welcome to the BLUE BOX SHOP! A mobile-first barebones shopping app, made with accessibility in mind, designed for DOCTOR WHO's 60th anniversary.
+I am a huge fan of DOCTOR WHO's classic era, revived era & expanded universe - this show is basically my biggest passion in life. 
+When I started learning web development, I just *knew* I'd build some kind of Doctor Who website at some point. Now it's done!
 
 ### DESCRIPTION
 Browse the app's products, add your favorites to the cart and manage their quantity.
@@ -62,8 +64,17 @@ An accessibility button is included in the app's top right corner, which highlig
 Please do not hesitate to report any lingering issues to me - I am all ears & would be grateful to you.
 
 ### CREDITS & MATERIALS USED
-- All icons and artwork featured were made by myself using Inkscape & GIMP.
-- The BBC Reith font is owned by the BBC. All rights reserved.
+#### Made by the author
+- Category bubbles 
+- Empty Child hero
+- Shop Logo 
+- Tardis hero
+#### Made by Material Icons and edited by the author using Inkscape & Gimp
+- Home, shop, cart & accessibility icons
+#### Made by the BBC and edited by the author using Inkscape & Gimp
+- All other featured icons and artwork 
+#### Made by the BBC
+- BBC Reith font
 
 ## GENESIS OF THIS PROJECT
 
@@ -83,7 +94,7 @@ This shopping app is the latest project I was asked to tackle as part of the cou
 ### THE DESIGN PROCESS, STEP BY STEP
 #### Writing down the specs 
 At the start of the project, it was important for me to keep the planned list features very simple, since my main focus was on learning React Router.
-- A SHEIN-like fashion app with a home page, a shop page divided into categories, product pages, and a cart
+- A mobile-first SHEIN-like fashion app with a home page, a shop page divided into categories, product pages, and a cart
 - Allow the user to add a product to the cart from the product page 
 - Allow the user to adjust a product's quantity manually & automatically from both the product page and the cart
 - Allow the user to navigate programmatically between all of the app's pages using a navbar
@@ -131,7 +142,14 @@ I then brainstormed at length in search for THE concept I'd be passionate about,
 - Implementing the BEM method for this project helped me immensely. While thinking about each of your classes and how they fit in your app may feel like a time waste, you'll be glad to know exactly why you named your components a certain way when you finish a project, and modification will be all the more easier.
 - While CSS modules & styled components now appear to be prefered by many, BEM has been proven reliable over the years, so I felt it was important to master it before moving on to more recent methods.
 - Putting myself in the shoes of a visually impaired person was eye-opening and allowed me to be much more precise in my implementation of `aria-label` and the choice of colors. My implementation of an actual 'accessibility mode' is still rudimentary, but accessibility will be my main priority on all future projects.
+- Tonally, the final product looks exactly like I envisioned it. I am glad that my original visual ambitions paid off.
 - I learned so much working on this project, and now that I am knowledgeable about React Router, I feel like I'm much more closer to building actual websites professionally. I'm eager to further improve my skills on future projects!
+
+## REFERENCES TO DOCTOR WHO
+- The home page features a TARDIS, the Doctor's time travelling spaceship.
+- The 404 page portrays Michelle Gomez's Missy shrinking Sacha Dhawan's Master with the iconic shrinking device.
+- The empty cart page portrays the empty child from series 1's episode of the same name.
+- The products represent the Doctor's various sonic screwdrivers, costumes, enemies.
 
 
 ## AUTHOR

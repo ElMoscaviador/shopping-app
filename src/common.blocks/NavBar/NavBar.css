@@ -10,3 +10,7 @@
     z-index: 3;
     --width: clamp(285px, 20vw, 450px);
 }
+
+.Nav-Bar .Categories-Nav__Name {
+    display: none;
+}
