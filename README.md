@@ -36,7 +36,7 @@ Browse the app's products, add your favorites to the cart and manage their quant
 
 ### RESPONSIVE DESIGN
 - The app is mobile-first & fully responsive. 
-- It has been tested for resolutions ranging from 5120*1440px to 375*667px.
+- It has been tested for resolutions ranging from 5120 * 1440px to 375 * 667px.
 
 ### ACCESSIBILITY
 The app's accessibility (contrast, colors, labels, keyboard navigation) has been thoroughly tested at every step of the design process using:
