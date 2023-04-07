@@ -1,0 +1,7 @@
+.Categories-Nav__Name {
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
