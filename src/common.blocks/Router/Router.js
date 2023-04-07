@@ -1,4 +1,4 @@
-import { createHashRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App/App";
 import Home from "../Home/Home";
 import Shop from "../Shop/Shop";
@@ -46,7 +46,7 @@ const routes = [
   },
 ];
 
-const Router = () => <RouterProvider router={createHashRouter(routes, {basename: '/'})} />;
+const Router = () => <RouterProvider router={createBrowserRouter(routes, {basename: '/'})} />;
 
 export default Router;
 export { routes };
