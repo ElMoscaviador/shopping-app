@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shopping-app/static/css/main.ceb938fc.css",
-    "main.js": "/shopping-app/static/js/main.cc11ee19.js",
+    "main.css": "/shopping-app/static/css/main.0f011be9.css",
+    "main.js": "/shopping-app/static/js/main.f5d0d262.js",
     "static/media/mask.png": "/shopping-app/static/media/mask.7a6f7ed2db5637f55c26.png",
     "static/media/figure-zygon.png": "/shopping-app/static/media/figure-zygon.f93af1107d06fd28b529.png",
     "static/media/figure-dalek.png": "/shopping-app/static/media/figure-dalek.6c0c424aef0c112cf95c.png",
@@ -35,11 +35,11 @@
     "static/media/sonics_focused.png": "/shopping-app/static/media/sonics_focused.1a4c65c98fc7777432e2.png",
     "static/media/NavBar.svg": "/shopping-app/static/media/NavBar.907cb8912818fba95233.svg",
     "index.html": "/shopping-app/index.html",
-    "main.ceb938fc.css.map": "/shopping-app/static/css/main.ceb938fc.css.map",
-    "main.cc11ee19.js.map": "/shopping-app/static/js/main.cc11ee19.js.map"
+    "main.0f011be9.css.map": "/shopping-app/static/css/main.0f011be9.css.map",
+    "main.f5d0d262.js.map": "/shopping-app/static/js/main.f5d0d262.js.map"
   },
   "entrypoints": [
-    "static/css/main.ceb938fc.css",
-    "static/js/main.cc11ee19.js"
+    "static/css/main.0f011be9.css",
+    "static/js/main.f5d0d262.js"
   ]
 }
