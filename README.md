@@ -1,4 +1,4 @@
-# 🇬🇧 THE 'BLUE BOX SHOP' SHOPPING APP 🇬🇧
+# 🇬🇧 A DOCTOR WHO INSPIRED SHOPPING APP: THE 'BLUE BOX' SHOP 🇬🇧
 #### A barebones shopping app dedicated to **BBC's DOCTOR WHO**
 https://github.com/ElMoscaviador/shopping-cart
 
@@ -76,6 +76,8 @@ Please do not hesitate to report any lingering issues to me - I am all ears & wo
 - All other featured icons and artwork 
 #### Made by the BBC
 - BBC Reith font
+#### Made by Jeremy Thomas on Unsplash: https://unsplash.com/fr/@jeremythomasphoto
+- Galaxy background mask
 
 ## GENESIS OF THIS PROJECT
 
