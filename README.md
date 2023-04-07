@@ -58,6 +58,9 @@ An accessibility button is included in the app's top right corner, which highlig
 ### JEST TESTING
 - This app has been integration tested using Jest & React Testing Library.
 
+### FUTURE UPDATES
+- I plan to circle back to this project and add more animations and UI perks later in my learning, once I near completion of the course.
+
 ### KNOWN ISSUES
 - While I have strived to make the app responsive, smaller resolutions in landscape mode may break the layout.
 
