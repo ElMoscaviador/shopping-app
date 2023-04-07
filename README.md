@@ -44,6 +44,7 @@ The app's accessibility (contrast, colors, labels, keyboard navigation) has been
 - Firefox's accessibility tool
 - Orca screen reader on Linux
 - NVDA screen reader on Windows
+
 An accessibility button is included in the app's top right corner, which highlights all interactive elements and adds textual indication to image buttons.
 
 ### ORGANIZATIONAL METHOD
