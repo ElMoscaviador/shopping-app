@@ -46,7 +46,7 @@ const routes = [
   },
 ];
 
-const Router = () => <RouterProvider router={createHashRouter(routes, {basename: './shopping-app'})} />;
+const Router = () => <RouterProvider router={createHashRouter(routes, {basename: '/'})} />;
 
 export default Router;
 export { routes };
