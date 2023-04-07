@@ -1,4 +1,4 @@
-# 🇬🇧 A DOCTOR WHO INSPIRED SHOPPING APP: THE 'BLUE BOX' SHOP 🇬🇧
+# 🇬🇧 A DOCTOR WHO-THEMED SHOPPING APP: THE 'BLUE BOX' SHOP 🇬🇧
 #### A barebones shopping app dedicated to **BBC's DOCTOR WHO**
 https://github.com/ElMoscaviador/shopping-cart
 
