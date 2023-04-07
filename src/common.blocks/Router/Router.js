@@ -46,7 +46,7 @@ const routes = [
   },
 ];
 
-const Router = () => <RouterProvider router={createBrowserRouter(routes, {basename: '/'})} />;
+const Router = () => <RouterProvider router={createBrowserRouter(routes, {basename: '/shopping-app'})} />;
 
 export default Router;
 export { routes };
