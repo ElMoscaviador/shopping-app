@@ -10,6 +10,14 @@
     padding: var(--space-3xs);
 }
 
+.Product__Cart-Button:hover {
+    transform: scale(1.05);
+}
+
+.Product__Cart-Button:active {
+    transform: scale(0.95);
+}
+
 .Product__Cart-Button .Gradient-Container {
     height: 100%;
     width: clamp(90px, 15vw, 150px);

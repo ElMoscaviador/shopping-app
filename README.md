@@ -63,6 +63,7 @@ An accessibility button is included in the app's top right corner, which highlig
 
 ### KNOWN ISSUES
 - While I have strived to make the app responsive, smaller resolutions in landscape mode may break the layout.
+- There are some spacing issues in the navbar & other CSS quirks.
 
 ### ABOUT UNKNOWN ISSUES
 Please do not hesitate to report any lingering issues to me - I am all ears & would be grateful to you.
