@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ElMoscaviador/shopping-app/static/css/main.e9a1ca86.css",
-    "main.js": "/ElMoscaviador/shopping-app/static/js/main.cdaad775.js",
+    "main.js": "/ElMoscaviador/shopping-app/static/js/main.795176ef.js",
     "static/media/mask.png": "/ElMoscaviador/shopping-app/static/media/mask.7a6f7ed2db5637f55c26.png",
     "static/media/figure-zygon.png": "/ElMoscaviador/shopping-app/static/media/figure-zygon.f93af1107d06fd28b529.png",
     "static/media/figure-dalek.png": "/ElMoscaviador/shopping-app/static/media/figure-dalek.6c0c424aef0c112cf95c.png",
@@ -36,10 +36,10 @@
     "static/media/NavBar.svg": "/ElMoscaviador/shopping-app/static/media/NavBar.907cb8912818fba95233.svg",
     "index.html": "/ElMoscaviador/shopping-app/index.html",
     "main.e9a1ca86.css.map": "/ElMoscaviador/shopping-app/static/css/main.e9a1ca86.css.map",
-    "main.cdaad775.js.map": "/ElMoscaviador/shopping-app/static/js/main.cdaad775.js.map"
+    "main.795176ef.js.map": "/ElMoscaviador/shopping-app/static/js/main.795176ef.js.map"
   },
   "entrypoints": [
     "static/css/main.e9a1ca86.css",
-    "static/js/main.cdaad775.js"
+    "static/js/main.795176ef.js"
   ]
 }
